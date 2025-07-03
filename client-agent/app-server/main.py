@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
-from ai.gemini import Gemini
+from shared.llm_integrations.gemini import Gemini
 
 # Init app
 load_dotenv(find_dotenv())  # Load environment variables from .env file

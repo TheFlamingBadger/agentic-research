@@ -4,3 +4,4 @@ uvicorn
 pydantic
 google-generativeai
 python-dotenv
+fastmcp
