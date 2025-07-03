@@ -17,6 +17,9 @@ class Gemini(APIPlatform):
     def chat(self, prompt: str) -> str:
         if self.system_prompt:
             prompt = f"{self.system_prompt}\n{prompt}"
-        response = self.model.generate_message(prompt)
+        
+        chat = self.model.start_chat()
+        response = chat.send_message(prompt)
+        print(f"Response: {response}")
         
         return response.text

@@ -38,10 +38,6 @@ class ChatResponse(BaseModel):
 # API Endpoints
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequests): # Runs this function on request
-    
     response_text = ai_platform.chat(request.prompt)
+    
     return ChatResponse(response=response_text)
-
-app.get("/")
-async def health_check():
-    return {"status": "ok"}
