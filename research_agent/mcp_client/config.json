@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "local_server": {
+            "transport": "stdio",
+            "command": "python3",
+            "args": ["./server.py", "--verbose"],
+            "env": {"DEBUG": "true"},
+            "cwd": "research_agent/mcp_server"
+        }
+    }
+}
