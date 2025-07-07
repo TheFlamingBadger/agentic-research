@@ -85,9 +85,9 @@ class MCPHost:
                 
                 if query.lower() == 'quit':
                     break
-                    
-                response = await self.process_query(query)
-                print("\n" + response)
+                elif query != "":
+                    response = await self.process_query(query)
+                    print("\n" + response)
                     
             except Exception as e:
                 print(f"\nError: {str(e)}")
