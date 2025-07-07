@@ -5,6 +5,7 @@
 # Links
 
 - [MCP Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture)
+- [MCP Schema](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2025-06-18/schema.ts)
 - [Public MCP Servers & Clients](https://www.pulsemcp.com/)
 - [Gemini Function Calling](https://ai.google.dev/gemini-api/docs/function-calling?example=meeting#python_4)
 - [Gemini Tool Use](https://ai.google.dev/gemini-api/docs/live-tools?hl=en)

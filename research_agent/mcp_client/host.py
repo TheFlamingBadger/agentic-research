@@ -3,6 +3,8 @@ import json
 from fastmcp import Client
 from shared.llm_integrations.gemini_client import GetGemini
 from shared.llm_integrations.base import APIPlatform
+from mcp.types import ListToolsResult, PromptMessage
+from google.genai import types
 
 class MCPHost:
 
@@ -25,56 +27,53 @@ class MCPHost:
     async def process_query(self, query: str) -> str:
         """Process a query using an LLM and available tools"""
 
-        async with self.client:
-            tools = await self.client.list_tools()
+        output = []
+        messages: list[types.Content] = [
+            types.Content(
+                role="user",
+                parts=[
+                    types.Part(text=query)],
+            )
+        ]
 
-        print(tools)
-        return
+        async with self.client:
+            tools: ListToolsResult = await self.client.list_tools()        
 
         # Initial LLM call (tool selection call)
-        response = self.llm.chat(query, tools)
-        return
+        response: types.Content = self.llm.chat(messages, tools)
+        messages.append(response) # Append the content from the model's response.
 
-        # Process response and handle tool calls
-        tool_results = []
-        final_text = []
+        for part in response.parts:
+            if part.text:
+                output.append(part.text)
 
-        for content in response.content:
-            if content.type == 'text':
-                final_text.append(content.text)
+            elif part.function_call:
+                tool_call = part.function_call
+                tool_result = None
 
-            elif content.type == 'tool_use':
-                tool_name = content.name
-                tool_args = content.input
-                
-                # TODO: Find which client has tool (handle no tool)
-                client = self.clients[0]
+                output.append(f"[Calling tool {tool_call.name} with args {tool_call.args}]")
 
-                # Execute tool call
-                result = await client.call_tool(tool_name, tool_args)
-                tool_results.append({"call": tool_name, "result": result})
-                final_text.append(f"[Calling tool {tool_name} with args {tool_args}]")
+                async with self.client:
+                    tool_result = await self.client.call_tool(
+                        tool_call.name,
+                        tool_call.args,
+                    )
 
-                # Continue conversation with tool results
-                if hasattr(content, 'text') and content.text:
-                    messages.append({
-                      "role": "assistant",
-                      "content": content.text
-                    })
-                messages.append({
-                    "role": "user", 
-                    "content": result.content
-                })
-
-                # Secondary LLM call (tool result processing call)
-                response = self.llm.chat(
-                    messages=messages,
+                # Append the function response
+                function_result = types.Part.from_function_response(
+                    name=tool_call.name,
+                    response={"result": tool_result},
                 )
+                messages.append(types.Content(role="user", parts=[function_result]))
 
-                final_text.append(response.content[0].text)
+                # If there's a function result to process, make secondary LLM call
+                response: types.Content = self.llm.chat(messages, tools)
+                messages.append(response)
 
-        return "\n".join(final_text)
-    
+                if response.parts[0].text:
+                    output.append(response.parts[0].text)
+        
+        return "\n\n".join(output)
 
     async def chat_loop(self):
         """Run an interactive chat loop"""
