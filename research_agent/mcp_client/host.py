@@ -66,12 +66,11 @@ class MCPHost:
                 )
                 messages.append(types.Content(role="user", parts=[function_result]))
 
-                # If there's a function result to process, make secondary LLM call
-                response: types.Content = self.llm.chat(messages, tools)
-                messages.append(response)
+        # If there's a function result to process, make secondary LLM call
+        response: types.Content = self.llm.chat(messages, tools)
 
-                if response.parts[0].text:
-                    output.append(response.parts[0].text)
+        if response.parts[0].text:
+            output.append(response.parts[0].text)
         
         return "\n\n".join(output)
 
