@@ -1,6 +1,6 @@
 from .base import APIPlatform
 from google import genai
-from google.genai.types import Content
+from google.genai import types
 from mcp.types import Tool
 
 class Gemini(APIPlatform):
@@ -14,9 +14,13 @@ class Gemini(APIPlatform):
         self.api_key = api_key
         self.system_prompt = system_prompt
 
-    def chat(self, messages: list[Content], toolsObj: list[Tool]) -> Content:
-        # if self.system_prompt:
-        #     prompt = f"{self.system_prompt}\n{prompt}"
+    def chat(self, messages: list[types.Content], toolsObj: list[Tool]) -> types.Content:
+        if self.system_prompt:
+            messages.insert(0, types.Content(
+                role="user",
+                parts=[
+                    types.Part(text=self.system_prompt)],
+            ))
 
         client = genai.Client()
         config = genai.types.GenerateContentConfig(tools=toolsObj)
@@ -28,4 +32,3 @@ class Gemini(APIPlatform):
         )
 
         return response.candidates[0].content
-        # return [part.content for part in response.candidates[0].content.parts]

@@ -5,15 +5,8 @@ from shared.prompts.agent_prompt import prompt
 
 load_dotenv(find_dotenv())
 
-# # AI agent config
-# def load_system_prompt():
-#     try:
-#         with open("../prompts/agent_prompt.md", "r") as f:
-#             return f.read()
-#     except FileNotFoundError:
-#         print("you suck")
-
-system_prompt = prompt
+# system_prompt = prompt
+system_prompt = None
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 if not gemini_api_key:
