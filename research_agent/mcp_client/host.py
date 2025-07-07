@@ -23,6 +23,16 @@ class MCPHost:
 
         self.client = Client(self.config)
 
+    
+    def countFunctionCalls(self, response: types.Content):
+        count = 0
+
+        for part in response.parts:
+            if part.function_call:
+                count += 1
+
+        return count
+
 
     async def process_query(self, query: str) -> str:
         """Process a query using an LLM and available tools"""
@@ -41,37 +51,41 @@ class MCPHost:
 
         # Initial LLM call (tool selection call)
         response: types.Content = self.llm.chat(messages, tools)
-        messages.append(response) # Append the content from the model's response.
+        messages.append(response)
+
+        # Finish condition: No function calls
+        while(self.countFunctionCalls(response) != 0):
+            for part in response.parts:
+                if part.text:
+                    output.append(part.text)
+
+                elif part.function_call:
+                    tool_call = part.function_call
+                    tool_result = None
+
+                    output.append(f"[Calling tool {tool_call.name} with args {tool_call.args}]")
+
+                    async with self.client:
+                        tool_result = await self.client.call_tool(
+                            tool_call.name,
+                            tool_call.args,
+                        )
+
+                    # Append the function response
+                    function_result = types.Part.from_function_response(
+                        name=tool_call.name,
+                        response={"result": tool_result},
+                    )
+                    messages.append(types.Content(role="user", parts=[function_result]))
+
+            # Secondary LLM call (process tool result)
+            response: types.Content = self.llm.chat(messages, tools)
+            messages.append(response)
 
         for part in response.parts:
             if part.text:
                 output.append(part.text)
 
-            elif part.function_call:
-                tool_call = part.function_call
-                tool_result = None
-
-                output.append(f"[Calling tool {tool_call.name} with args {tool_call.args}]")
-
-                async with self.client:
-                    tool_result = await self.client.call_tool(
-                        tool_call.name,
-                        tool_call.args,
-                    )
-
-                # Append the function response
-                function_result = types.Part.from_function_response(
-                    name=tool_call.name,
-                    response={"result": tool_result},
-                )
-                messages.append(types.Content(role="user", parts=[function_result]))
-
-        # If there's a function result to process, make secondary LLM call
-        response: types.Content = self.llm.chat(messages, tools)
-
-        if response.parts[0].text:
-            output.append(response.parts[0].text)
-        
         return "\n\n".join(output)
 
     async def chat_loop(self):
