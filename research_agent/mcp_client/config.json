@@ -2,10 +2,19 @@
     "mcpServers": {
         "local_server": {
             "transport": "stdio",
-            "command": "python3",
+            "command": "uv",
             "args": ["./server.py", "--verbose"],
             "env": {"DEBUG": "true"},
             "cwd": "research_agent/mcp_server"
+        },
+        "weather": {
+        "command": "uv",
+        "args": [
+            "--directory",
+            "C:\\Users\\quent\\dev\\weather",
+            "run",
+            "weather.py"
+        ]
         }
     }
 }
