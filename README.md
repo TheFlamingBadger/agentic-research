@@ -24,3 +24,36 @@
 - [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)
 - [Microsoft Autogen](https://github.com/microsoft/autogen)
 - [LangGraph](https://www.langchain.com/langgraph)
+
+# Instructions
+
+## Setup Project
+
+1. Clone repository into Python virtual environment
+2. Activate virtual environment with `source bin/activate` on Unix or `.\Scripts\activate` on Windows
+3. Install dependencies with `pip install -r requirements.txt`
+4. Create the file `.../research_agent/mcp_client/config.json` populate with completed template:
+    ```json
+    {
+        "mcpServers": {
+            "local_server": {
+                "command": "uv",
+                "args": [
+                    "--directory",
+                    "C:\\Users\\[username]\\[path]\\[to]\\[venv]\\[repo]\\research_agent\\mcp_server",
+                    "run",
+                    "server.py"
+                ]
+            }
+        }
+    }
+    ```
+5. Create and populate `.env` and define `MONGODB_USER`, `MONGODB_PWD`, `MONGODB_CLUSTER`, `GEMINI_API_KEY`
+
+## Running Project
+
+Run MCP server with `mcp dev .../research_agent/mcp_server/server.py`
+
+Run MCP client with `uv run .../research/agent/mcp_client/host.py`
+
+- **Note:** you may need to add current directory to Python path with `export PYTHONPATH=.` on Unix or `$env:PYTHONPATH="."` on Windows
