@@ -1,20 +1,21 @@
-import asyncio
-import json
-from fastmcp import Client
 from shared.llm_integrations.gemini_client import GetGemini
 from shared.llm_integrations.base import APIPlatform
 from mcp.types import ListToolsResult
 from google.genai import types
+from fastmcp import Client
+import shared.logger.config
+import structlog
+import asyncio
+import json
 import sys
 
+# Workaround for asyncio hanging on event loop close on Windows
 COINIT_MULTITHREADED = 0x0
 sys.coinit_flags = COINIT_MULTITHREADED
 
 class MCPHost:
 
-    def __init__(self, config_path = "config.json"):
-        self.llm: APIPlatform = GetGemini()
-
+    def __init__(self, config_path = "config.json", logging=False):
         try:
             with open(config_path) as f:
                 self.config = json.load(f)
@@ -25,10 +26,35 @@ class MCPHost:
         except OSError as e:
             raise RuntimeError(f"Could not open config file: {e}")
 
+        self.llm: APIPlatform = GetGemini()
         self.client = Client(self.config)
+        self.log = structlog.get_logger()
+        self.log.info("MCP host initialised")
 
     
-    def countFunctionCalls(self, response: types.Content):
+    def log_response(self, response):
+        
+        if not self.log:
+            return
+
+        llm_response = []
+
+        for part in response.parts:
+            llm_response.append({
+                "text": part.text,
+                "function_call": part.function_call.model_dump_json() if part.function_call else None,
+            })
+
+        self.log.info(
+            "llm_call",
+            call_count=self.call_count,
+            llm_response=llm_response,
+        )
+
+        self.call_count += 1
+
+    
+    def count_function_calls(self, response: types.Content):
         count = 0
 
         for part in response.parts:
@@ -40,6 +66,8 @@ class MCPHost:
 
     async def process_query(self, query: str) -> str:
         """Process a query using an LLM and available tools"""
+
+        self.call_count = 0
 
         output: list[str] = []
         messages: list[types.Content] = [
@@ -55,10 +83,11 @@ class MCPHost:
 
         # Initial LLM call (tool selection call)
         response: types.Content = self.llm.chat(messages, tools)
+        self.log_response(response)
         messages.append(response)
 
         # Finish condition: No function calls
-        while(self.countFunctionCalls(response) != 0):
+        while(self.count_function_calls(response) != 0):
             for part in response.parts:
                 if part.text:
                     output.append(part.text)
@@ -84,6 +113,7 @@ class MCPHost:
 
             # Secondary LLM call (process tool result)
             response: types.Content = self.llm.chat(messages, tools)
+            self.log_response(response)
             messages.append(response)
 
         for part in response.parts:
@@ -91,6 +121,7 @@ class MCPHost:
                 output.append(part.text)
 
         return "\n\n".join(output)
+
 
     async def chat_loop(self):
         """Run an interactive chat loop"""
@@ -115,7 +146,7 @@ async def main():
     host = None
 
     try:
-        host = MCPHost("research_agent/mcp_client/config.json")
+        host = MCPHost("research_agent/mcp_client/config.json", logging=True)
     except Exception as e:
         print(f"Failed to load config: {e}")
         return
