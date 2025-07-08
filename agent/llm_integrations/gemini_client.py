@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv, find_dotenv
-from shared.llm_integrations.gemini import Gemini
-from shared.prompts.agent_prompt import prompt
+from llm_integrations.gemini import Gemini
 
 load_dotenv(find_dotenv())
 

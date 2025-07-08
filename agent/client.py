@@ -1,9 +1,9 @@
-from shared.llm_integrations.gemini_client import GetGemini
-from shared.llm_integrations.base import APIPlatform
+from llm_integrations.gemini_client import GetGemini
+from llm_integrations.base import APIPlatform
 from mcp.types import ListToolsResult
 from google.genai import types
 from fastmcp import Client
-import shared.logger.config
+import logger.config
 import structlog
 import asyncio
 import json

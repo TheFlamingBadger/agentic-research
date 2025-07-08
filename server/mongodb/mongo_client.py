@@ -1,8 +1,7 @@
 from dotenv import load_dotenv, find_dotenv
-import os
 from pymongo import MongoClient
-from pymongo.errors import ConnectionFailure, OperationFailure
 import certifi
+import os
 
 load_dotenv(find_dotenv())
 

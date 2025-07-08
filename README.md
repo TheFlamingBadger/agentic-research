@@ -2,6 +2,35 @@
 
 <img width="888" alt="Screenshot 2025-07-03 at 4 47 48 pm" src="https://github.com/user-attachments/assets/ea132ab1-884f-4fd7-b7d6-45dcdfb153e3" />
 
+# Repository Structure
+
+```
+.
+├── agent/ 
+│   ├── llm_integrations/
+│   │   ├── base.py             # Defines LLM base class
+│   │   ├── gemini_client.py    # Establishes Gemini client
+│   │   ├── gemini.py           # Implements base LLM class virtual functions
+│   │   └── models.py           # Defines Pydantic LLM input-output objects
+│   ├── logger/
+│   │   └── config.py           # Configured logger behaviour
+│   ├── mcp_configs/            # MCP configuration files (Claude structure)
+│   ├── prompts/                # System prompts for agents
+│   ├── agent.py                # Defines agent class
+│   └── client.py               # Instantiates agent client
+│
+├── server/
+│   ├── mongodb/
+│   │   └── mongo_client.py     # Establishes MongoDB client
+│   └── server.py               # Runs MCP server and defines tools and resources
+│
+├── .env                        # Environment variables (manually created)
+├── .gitignore                  # Files and directories to ignore
+├── LICENSE                     # Open source license (MIT)
+├── README.md                   # Project overview and setup instructions
+└── requirements.txt            # Python dependencies
+```
+
 # Links
 
 - [MCP Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture)
@@ -32,7 +61,7 @@
 1. Clone repository into Python virtual environment
 2. Activate virtual environment with `source bin/activate` on Unix or `.\Scripts\activate` on Windows
 3. Install dependencies with `pip install -r requirements.txt`
-4. Create the file `.../research_agent/mcp_client/config.json` populate with completed template:
+4. Create the file `.../agent/mcp_configs/config.json` populate with completed template:
     ```json
     {
         "mcpServers": {
@@ -52,8 +81,8 @@
 
 ## Running Project
 
-Run MCP server with `mcp dev .../research_agent/mcp_server/server.py`
+Run MCP server with `mcp dev .../server/server.py`
 
-Run MCP client with `uv run .../research/agent/mcp_client/host.py`
+Run MCP client with `uv run .../agent/client.py`
 
 - **Note:** you may need to add current directory to Python path with `export PYTHONPATH=.` on Unix or `$env:PYTHONPATH="."` on Windows

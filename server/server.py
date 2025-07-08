@@ -1,6 +1,5 @@
 import sys
 import os
-import json
 from typing import Dict, List, Any
 
 # Add the src directory to the Python path
@@ -8,10 +7,8 @@ src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 if src_dir not in sys.path:
     sys.path.insert(0, src_dir)
 
-
-from urllib.parse import unquote_plus
-from mcp.server.fastmcp import FastMCP, Context
-from research_agent.mongodb.mongo_client import get_db
+from mcp.server.fastmcp import FastMCP
+from mongodb.mongo_client import get_db
 
 # Create a server instance
 mcp = FastMCP(name="MyAssistantServer")
