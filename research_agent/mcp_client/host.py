@@ -3,8 +3,12 @@ import json
 from fastmcp import Client
 from shared.llm_integrations.gemini_client import GetGemini
 from shared.llm_integrations.base import APIPlatform
-from mcp.types import ListToolsResult, PromptMessage
+from mcp.types import ListToolsResult
 from google.genai import types
+import sys
+
+COINIT_MULTITHREADED = 0x0
+sys.coinit_flags = COINIT_MULTITHREADED
 
 class MCPHost:
 
@@ -37,7 +41,7 @@ class MCPHost:
     async def process_query(self, query: str) -> str:
         """Process a query using an LLM and available tools"""
 
-        output = []
+        output: list[str] = []
         messages: list[types.Content] = [
             types.Content(
                 role="user",
