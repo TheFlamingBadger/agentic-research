@@ -1,10 +1,10 @@
 # Agentic Research
 
-An proof of concept and research inquiry into the state and usefulness of agentic system design. 
+A proof of concept and research inquiry into the state and usefulness of agentic systems.
 
 ## System Structure
 
-<img width=50% alt="Screenshot 2025-07-08 at 6 08 01 pm" src="https://github.com/user-attachments/assets/1cd163be-ab9e-4e80-8cc2-acf4db50bacc" />
+<img width=80% alt="System Diagram" src="https://github.com/user-attachments/assets/e3b20155-4316-4ce7-9cac-31efbe6b564b" />
 
 ## Repository Structure
 
@@ -50,7 +50,7 @@ An proof of concept and research inquiry into the state and usefulness of agenti
                 "command": "uv",
                 "args": [
                     "--directory",
-                    "C:\\Users\\[username]\\[path]\\[to]\\[venv]\\[repo]\\research_agent\\mcp_server",
+                    "C:\\Users\\[username]\\[path]\\[to]\\[venv]\\[repo]\\server",
                     "run",
                     "server.py"
                 ]
