@@ -5,15 +5,10 @@ from google.genai import types
 from fastmcp import Client
 import logger.config
 import structlog
-import asyncio
 import json
-import sys
 
-# Workaround for asyncio hanging on event loop close on Windows
-COINIT_MULTITHREADED = 0x0
-sys.coinit_flags = COINIT_MULTITHREADED
 
-class MCPHost:
+class Agent:
 
     def __init__(self, config_path = "config.json", logging=False):
         try:
@@ -121,38 +116,3 @@ class MCPHost:
                 output.append(part.text)
 
         return "\n\n".join(output)
-
-
-    async def chat_loop(self):
-        """Run an interactive chat loop"""
-        print("\nMCP Client Started!")
-        print("Type your queries or 'quit' to exit.")
-        
-        while True:
-            try:
-                query = input("\nQuery: ").strip()
-                
-                if query.lower() == 'quit':
-                    break
-                elif query != "":
-                    response = await self.process_query(query)
-                    print("\n" + response)
-                    
-            except Exception as e:
-                print(f"\nError: {str(e)}")
-
-
-async def main():
-    host = None
-
-    try:
-        host = MCPHost("agent/mcp_configs/config.json", logging=True)
-    except Exception as e:
-        print(f"Failed to load config: {e}")
-        return
-
-    await host.chat_loop()
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
