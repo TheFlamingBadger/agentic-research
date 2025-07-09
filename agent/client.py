@@ -27,9 +27,23 @@ async def chat_loop(host):
 
 async def main():
     host = None
+    prompt_path = None
+    config_path = "agent/mcp_configs/config.json"
+
+    if len(sys.argv) > 1:
+        config_path = f"agent/mcp_configs/{sys.argv[1]}.json"
+
+    if len(sys.argv) > 2:
+        prompt_path = f"agent/prompts/{sys.argv[2]}.md"
+    
+    print(config_path, prompt_path)
 
     try:
-        host = Agent("agent/mcp_configs/config.json", logging=True)
+        host = Agent(
+            config_path=config_path,
+            prompt_path=prompt_path,
+            logging=True,
+        )
     except Exception as e:
         print(f"Failed to load config: {e}")
         return

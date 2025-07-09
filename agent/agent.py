@@ -10,7 +10,7 @@ import json
 
 class Agent:
 
-    def __init__(self, config_path = "config.json", logging=False):
+    def __init__(self, config_path, prompt_path, logging=False):
         try:
             with open(config_path) as f:
                 self.config = json.load(f)
@@ -21,7 +21,7 @@ class Agent:
         except OSError as e:
             raise RuntimeError(f"Could not open config file: {e}")
 
-        self.llm: APIPlatform = GetGemini()
+        self.llm: APIPlatform = GetGemini(prompt_path)
         self.client = Client(self.config)
         self.log = structlog.get_logger()
         self.log.info("MCP host initialised")
