@@ -4,7 +4,7 @@ A proof of concept and research inquiry into the state and usefulness of agentic
 
 ## System Structure
 
-<img width=80% alt="System Diagram" src="https://github.com/user-attachments/assets/e3b20155-4316-4ce7-9cac-31efbe6b564b" />
+<img width=100% alt="System Diagram" src="https://github.com/user-attachments/assets/e3b20155-4316-4ce7-9cac-31efbe6b564b" />
 
 ## Repository Structure
 
@@ -62,7 +62,9 @@ A proof of concept and research inquiry into the state and usefulness of agentic
 
 ### Running Project
 
-Run MCP server with `mcp dev .../server/server.py`
+Run MCP server with `mcp dev .../server/server.py [mcp-config-name] [prompt-name]`
+
+- **Note**: Do not include file extensions for MCP config or prompt file names.
 
 Run MCP client with `uv run .../agent/client.py`
 
@@ -93,3 +95,9 @@ Run MCP client with `uv run .../agent/client.py`
 - [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)
 - [Microsoft Autogen](https://github.com/microsoft/autogen)
 - [LangGraph](https://www.langchain.com/langgraph)
+
+### Prompt Engineering Resources
+
+- [Leaked System Prompts](https://github.com/jujumilk3/leaked-system-prompts/blob/main/cursor-ide-sonnet_20241224.md)
+- [Prompt Frameowkrs](https://gist.github.com/ih0r-d/f976df219d40573302a8b346e8609a02)
+- [Prompt Examples](https://github.com/f/awesome-chatgpt-prompts)
