@@ -1,0 +1,212 @@
+[
+  {
+    "sha": "ed805726d0967c7cbf51fe1a98d63882b10659a1",
+    "message": "Add prompting resources to readme",
+    "author": "Angus McLean",
+    "date": "2025-07-09T05:56:19Z"
+  },
+  {
+    "sha": "cce60bdc3212746735253ffde879e19a5d5ad46b",
+    "message": "Add rate limiting to Gemini prompts",
+    "author": "Angus McLean",
+    "date": "2025-07-09T05:48:26Z"
+  },
+  {
+    "sha": "bfa884c373bfcceacd7039caf9a4dd1b86aeb0d8",
+    "message": "updated readme, github metadata scraper",
+    "author": "Quenton Yeo",
+    "date": "2025-07-09T05:31:03Z"
+  },
+  {
+    "sha": "dbd8f297b8b87050b24d296608d2cb46941af92d",
+    "message": "Add config and prompt as arguments to client.py.",
+    "author": "Angus McLean",
+    "date": "2025-07-09T05:20:53Z"
+  },
+  {
+    "sha": "af3738240012a1f5ce7996c260f69914c1ccfaf2",
+    "message": "Update README system diagram",
+    "author": "Angus McLean",
+    "date": "2025-07-08T08:36:30Z"
+  },
+  {
+    "sha": "b1f760e950dbe61bceb01d3f362d14dd89787c5d",
+    "message": "Update system structure diagram",
+    "author": "Angus McLean",
+    "date": "2025-07-08T08:11:47Z"
+  },
+  {
+    "sha": "cf2edb86bb674e0b266c3be7ce0d220201d2c76b",
+    "message": "Separate client from agent class",
+    "author": "Angus McLean",
+    "date": "2025-07-08T06:58:41Z"
+  },
+  {
+    "sha": "60c0713b121e373a54a2daa100a64a7aceac25d7",
+    "message": "Refactored repo structure",
+    "author": "Angus McLean",
+    "date": "2025-07-08T06:51:21Z"
+  },
+  {
+    "sha": "d76c763e69c7dcdc7670fb92454e7437bcfa10ee",
+    "message": "Add logging",
+    "author": "Angus McLean",
+    "date": "2025-07-08T01:50:30Z"
+  },
+  {
+    "sha": "633ea394153f5b1c0bf4a7cb60f003a031da560c",
+    "message": "Potential fix for host.py hanging on windows",
+    "author": "Angus McLean",
+    "date": "2025-07-08T00:01:41Z"
+  },
+  {
+    "sha": "37899f163f546b7b054c6c6a67e431b6589aa846",
+    "message": "Convert from linear workflow to looping agent",
+    "author": "Angus McLean",
+    "date": "2025-07-07T23:54:53Z"
+  },
+  {
+    "sha": "10d010ff5c12ff7a15fa9f1fc87d2c05f488539c",
+    "message": "Fix system-level prompt",
+    "author": "Angus McLean",
+    "date": "2025-07-07T07:01:55Z"
+  },
+  {
+    "sha": "7d4ee37f31174dbca8c0887e9b51a97604e289ac",
+    "message": "Add project install and usage instructions",
+    "author": "Angus McLean",
+    "date": "2025-07-07T06:39:31Z"
+  },
+  {
+    "sha": "15281bcf2f43f2776aee64e2e579ea50a03827a5",
+    "message": "Tweak client UI to ignore empty queries",
+    "author": "Angus McLean",
+    "date": "2025-07-07T04:55:26Z"
+  },
+  {
+    "sha": "9da78f65efbd5c6c53fdcb72e844ae0cba04aee6",
+    "message": "mcp server resources testing",
+    "author": "Quenton Yeo",
+    "date": "2025-07-07T01:22:10Z"
+  },
+  {
+    "sha": "956f283ba1998ad50897af70dbc3842aede20605",
+    "message": "Multi-function-call multi-server MCP client",
+    "author": "Angus McLean",
+    "date": "2025-07-07T01:12:08Z"
+  },
+  {
+    "sha": "a90baa91bb983d58e753823f07825a9e843bc5cb",
+    "message": "Integrate server and client changes",
+    "author": "Angus McLean",
+    "date": "2025-07-07T00:53:40Z"
+  },
+  {
+    "sha": "cecacbf6fa0f3850a02de8d8262c1fa7e2ec91cd",
+    "message": "MCP client working with single server and single tool calls",
+    "author": "Angus McLean",
+    "date": "2025-07-07T00:53:16Z"
+  },
+  {
+    "sha": "b90b0fd6342dc3bbd13f1c3d368fa33058201aa9",
+    "message": "mcp server implementation",
+    "author": "Quenton Yeo",
+    "date": "2025-07-06T23:04:09Z"
+  },
+  {
+    "sha": "128b296464c6b3f0e592b0bd2fb5f98f043134f9",
+    "message": "Add gemini links",
+    "author": "Angus McLean",
+    "date": "2025-07-05T05:15:18Z"
+  },
+  {
+    "sha": "f929acfee8df8695521a5bf7a73b9f83c05149a0",
+    "message": "Add MCP client-server connection using config.json",
+    "author": "Angus McLean",
+    "date": "2025-07-04T06:03:08Z"
+  },
+  {
+    "sha": "b95c6d280c72d99109c9168569fdc2b2f07a5159",
+    "message": "Add spec links to readme",
+    "author": "Angus McLean",
+    "date": "2025-07-04T00:09:38Z"
+  },
+  {
+    "sha": "9f8c0eb39e4345d05ec7f02982a5abee4b776c24",
+    "message": "Update diagram with progress",
+    "author": "Angus McLean",
+    "date": "2025-07-03T06:49:28Z"
+  },
+  {
+    "sha": "a8cbdf01c59ebb874ebf0d440aba291b92f15fd9",
+    "message": "Refactored gemini code out of app/main.py",
+    "author": "Angus McLean",
+    "date": "2025-07-03T06:43:56Z"
+  },
+  {
+    "sha": "76c4d32d0d4ee84c55054673016f72eda8478df3",
+    "message": "update",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T06:43:24Z"
+  },
+  {
+    "sha": "62e91409cc26f99c879dcc8c5e7a412002f5513b",
+    "message": "basic mcp tool call working, moved server file",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T06:40:08Z"
+  },
+  {
+    "sha": "fd362f93dff76fea2df8dcbaf47d6d8a266c7244",
+    "message": "rename hyphens",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T06:10:52Z"
+  },
+  {
+    "sha": "3fc80a3ced5c1a40283075554f2066593b5dbb18",
+    "message": "Restructured repo",
+    "author": "Angus McLean",
+    "date": "2025-07-03T06:08:04Z"
+  },
+  {
+    "sha": "8356a1742b3d3cf4835e32d43c521c1b5cf349fa",
+    "message": "base gemini API implementation",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T05:38:59Z"
+  },
+  {
+    "sha": "c819fc5a6a0d14369e29c0f15ce7654c4ebe9c6f",
+    "message": "base gemini API implementation",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T05:23:56Z"
+  },
+  {
+    "sha": "acc097f67d6cfec9805aa95e82b23ff027103411",
+    "message": "Add MongoDB connection",
+    "author": "Angus McLean",
+    "date": "2025-07-03T05:11:01Z"
+  },
+  {
+    "sha": "5fab5d7a136307d64c97a9880b274ad47c9017fc",
+    "message": "add requirements",
+    "author": "Quenton Yeo",
+    "date": "2025-07-03T04:36:40Z"
+  },
+  {
+    "sha": "109e799532be53304623a55f1a64f307e5829130",
+    "message": "Add FastAPI root",
+    "author": "Angus McLean",
+    "date": "2025-07-03T04:22:36Z"
+  },
+  {
+    "sha": "d573756e336d8319ea7533fc1a5c2df96948d114",
+    "message": "Add initial system diagram",
+    "author": "Angus McLean",
+    "date": "2025-07-03T04:18:28Z"
+  },
+  {
+    "sha": "92145e6fc7397e32032ffae529a1f31349c1de58",
+    "message": "Initial commit",
+    "author": "Angus McLean",
+    "date": "2025-07-03T04:15:22Z"
+  }
+]

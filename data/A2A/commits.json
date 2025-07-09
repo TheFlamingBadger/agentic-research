@@ -1,0 +1,1634 @@
+[
+  {
+    "sha": "6ba72f0d51c2e3d0728f84e9743b6d0e88730b51",
+    "message": "fix: Update json names of gRPC objects for proper transcoding  (#847)",
+    "author": "pstephengoogle",
+    "date": "2025-07-08T20:30:48Z"
+  },
+  {
+    "sha": "aeef6566e897742d6e96a7777e495c5b4b5595cf",
+    "message": "docs: fix task doc (#848)\n\nFixes #836",
+    "author": "swapydapy",
+    "date": "2025-07-08T19:01:50Z"
+  },
+  {
+    "sha": "49167717fbba349cf27f4f3937df50272f767b11",
+    "message": "docs: Fix git credentials",
+    "author": "Holt Skinner",
+    "date": "2025-07-08T15:59:12Z"
+  },
+  {
+    "sha": "ea7fc30bb0dada72f150fc25e197b3a5c0aae012",
+    "message": "docs: Add Token to 404 Deployment",
+    "author": "Holt Skinner",
+    "date": "2025-07-08T15:44:23Z"
+  },
+  {
+    "sha": "7d5852b58e03fe53114e1f73dd0afaada35688bc",
+    "message": "docs: Add Additional Interfaces and Preferred Transport to A2A Specification Documentation (#843)\n\n# Adding Additional Interfaces and Preferred Transport to A2A Specification Documentation\n\n- added missing fields to the documentation\n- added missing fields to example AgentCard in the spec\n\nFixes #842 🦕",
+    "author": "Israel Ekpo",
+    "date": "2025-07-08T15:37:37Z"
+  },
+  {
+    "sha": "3e8f8a5a12f0b509aaaa12eceeefc27f80beca07",
+    "message": "docs: Add 404 Redirect",
+    "author": "Holt Skinner",
+    "date": "2025-07-08T15:36:31Z"
+  },
+  {
+    "sha": "630136b5664b6a1786dfa586c9949183ad3cf1b8",
+    "message": "chore: Add .gitattributes (#840)",
+    "author": "Holt Skinner",
+    "date": "2025-07-07T14:40:22Z"
+  },
+  {
+    "sha": "7207200d372de167c8803e90cc5798e42b521fbc",
+    "message": "docs: Update README.md to include Java SDK (#829)\n\nStefano and Rod say it's ready... 💯",
+    "author": "alan blount",
+    "date": "2025-07-03T15:09:02Z"
+  },
+  {
+    "sha": "f17edc0b9e9d8b04ed6776b7949da69a21088c48",
+    "message": "docs: Update Redirect Links",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T20:47:23Z"
+  },
+  {
+    "sha": "693356164c0f35ba978a5141a3e75f07363f5bd3",
+    "message": "docs: Update CHANGELOG to \"Release Notes\"",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T20:00:53Z"
+  },
+  {
+    "sha": "2ed02810f6fb2eda806f12039995bb169215350f",
+    "message": "docs: Add CHANGELOG to Specification page (#828)\n\nCo-authored-by: gemini-code-assist[bot] <176961590+gemini-code-assist[bot]@users.noreply.github.com>",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T19:57:27Z"
+  },
+  {
+    "sha": "754c2cc48dffb6788c9efc07df4f5aafc39ec03b",
+    "message": "docs: Add Mermaid Diagram for A2A Request Lifecycle (#827)\n\n<img width=\"663\" alt=\"Screenshot 2025-07-02 at 2 32 33 PM\"\nsrc=\"https://github.com/user-attachments/assets/81e84e40-77a7-4ce5-b31c-dd81e823056b\"\n/>",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T19:44:11Z"
+  },
+  {
+    "sha": "32f3f9eb2efa40c7a1d3f3cfe7e5924e999b18f1",
+    "message": "Revert \"feat(spec): Add AGENT_CARD_WELL_KNOWN_URI to spec (#824)\"\n\nThis reverts commit 66da9d10ee87dc1f8baa20a21360bebbe7d4ff1b.",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T18:09:37Z"
+  },
+  {
+    "sha": "66da9d10ee87dc1f8baa20a21360bebbe7d4ff1b",
+    "message": "feat(spec): Add AGENT_CARD_WELL_KNOWN_URI to spec (#824)\n\nPrevents usage of \"Magic Strings\" in SDKs, which supports better\nadherence to the recommended path for Agent Cards.\n\nNOTE: This path might also need to be changed based on feedback in\nhttps://github.com/protocol-registries/well-known-uris/issues/66 so\nhaving a global constant would make this adjustment easier.\n\nFixes #816 🦕",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T16:51:35Z"
+  },
+  {
+    "sha": "426f7a88330168021d8d01b43c146563dff6d7cb",
+    "message": "chore: Add exceptions for buf lint and upgrade buf.yaml to v2 (#786)\n\nThis PR does a few cleanups to `buf.yaml`:\n\n- Upgrades `buf.yaml` to\n[`v2`](https://buf.build/blog/buf-cli-next-generation), which is what is\ngenerally used going forward, and matches the `buf.gen.yaml` version. In\nthis case, virtually no changes.\n- Adds lint exceptions for those lint rules that do not pass `buf lint`.\nThis now ensures that `buf lint` passes.\n- Updates a few comments in `buf.yaml` for clarification.\n- Updates the `README.md` to use `buf lint` instead of `buf build`. Note\nthat `buf build` is implicitly run via `buf lint`.\n- Removes the instruction about checking for breaking changes, as\nthere's no mechanism for this set up yet. Happy to contribute a PR to\nmake this simple if this would be desirable.\n- Removes the instruction to modify `buf.yaml`. `buf.yaml` should\ngenerally never need modification.\n\n---------\n\nSigned-off-by: bufdev <bufdev-github@buf.build>",
+    "author": "bufdev",
+    "date": "2025-07-02T15:42:07Z"
+  },
+  {
+    "sha": "b3a725b97a2165836043c6e8202cdf625fd9ce95",
+    "message": "chore(spec): Add examples and fix spelling errors in proto (#823)",
+    "author": "Holt Skinner",
+    "date": "2025-07-02T15:37:41Z"
+  },
+  {
+    "sha": "8051695dd54f56a647e8ce7f5439c4b00e3981d6",
+    "message": "docs: Fixed typo (`type` is `kind` on parts) in example (#817)\n\n# Description\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/a2aproject/A2A/blob/main/CONTRIBUTING.md).\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (if necessary)",
+    "author": "DracoBlue",
+    "date": "2025-07-02T15:15:00Z"
+  },
+  {
+    "sha": "7fd0dcc6e43cc3ab53cb2f01e3885f2a756c6a09",
+    "message": "chore(spec): Add default value for `AgentCard.protocolVersion` (#812)\n\n- Prevents a breaking change in the Python Library",
+    "author": "Holt Skinner",
+    "date": "2025-06-30T20:19:55Z"
+  },
+  {
+    "sha": "22b52705a169123aa06cdf28261e12150ee5777f",
+    "message": "chore(main): release 0.2.5 (#756)\n\n:robot: I have created a release *beep* *boop*\n---\n\n\n## [0.2.5](https://github.com/a2aproject/A2A/compare/v0.2.4...v0.2.5)\n(2025-06-30)\n\n\n### ⚠ BREAKING CHANGES\n\n* **spec:** Add a required protocol version to the agent card.\n([#802](https://github.com/a2aproject/A2A/issues/802))\n* Support for multiple pushNotification config per task\n([#738](https://github.com/a2aproject/A2A/issues/738))\n([f355d3e](https://github.com/a2aproject/A2A/commit/f355d3e922de61ba97873fe2989a8987fc89eec2))\n\n### Features\n\n* **spec:** Add a required protocol version to the agent card.\n([#802](https://github.com/a2aproject/A2A/issues/802))\n([90fa642](https://github.com/a2aproject/A2A/commit/90fa64209498948b329a7b2ac6ec38942369157a))\n* **spec:** Support for multiple pushNotification config per task\n([#738](https://github.com/a2aproject/A2A/issues/738))\n([f355d3e](https://github.com/a2aproject/A2A/commit/f355d3e922de61ba97873fe2989a8987fc89eec2))\n\n### Documentation\n\n* update spec & doc topic with non-restartable tasks\n([#770](https://github.com/a2aproject/A2A/issues/770))\n([ebc4157](https://github.com/a2aproject/A2A/commit/ebc4157ca87ae08d1c55e38e522a1a17201f2854))\n\n---\nThis PR was generated with [Release\nPlease](https://github.com/googleapis/release-please). See\n[documentation](https://github.com/googleapis/release-please#release-please).\n\n---------\n\nCo-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "release-please[bot]",
+    "date": "2025-06-30T20:10:26Z"
+  },
+  {
+    "sha": "90fa64209498948b329a7b2ac6ec38942369157a",
+    "message": "feat(spec)!: Add a required protocol version to the agent card. (#802)\n\nAdd a new protocol version field to the agent card.\n\nRelease-As: 0.2.5",
+    "author": "dmandar",
+    "date": "2025-06-30T20:04:16Z"
+  },
+  {
+    "sha": "3590012159505108b09c36afd776ccc333540f67",
+    "message": "chore(spec): Add `@TJS-examples` to spec and add missing Union Types (#810)\n\n- **Replaced `@example` with `@TJS-examples`**: All JSDoc `@example`\ntags have been converted to `@TJS-examples`, used\nby`typescript-json-schema` to generate example values.\n- **Completed Union Types**: The `JSONRPCResponse` union type was\nincomplete. Added the missing `ListTaskPushNotificationConfigResponse`\nand `DeleteTaskPushNotificationConfigResponse` types to make it\nconsistent with the defined request types.",
+    "author": "Holt Skinner",
+    "date": "2025-06-30T19:52:04Z"
+  },
+  {
+    "sha": "16577ac6b339f688e3c9cf7cd0a4639ef7df7532",
+    "message": "format: update formatting (#798)\n\n- update formatting settings for vscode\n- format settings files\n- remove whitespace\n- remove empty not final new lines",
+    "author": "Paulchen",
+    "date": "2025-06-30T18:56:25Z"
+  },
+  {
+    "sha": "1de528dfefd9975a6243a83cf82807ae9708175f",
+    "message": "docs: Update Contributing Guide (#809)\n\nFixes #804",
+    "author": "Holt Skinner",
+    "date": "2025-06-30T18:54:50Z"
+  },
+  {
+    "sha": "9a7e0b9ea4ccdbb9412ba21504b8d8d980b282ba",
+    "message": "ci: Fix MIKE_VERSION environment variable",
+    "author": "Holt Skinner",
+    "date": "2025-06-30T18:07:06Z"
+  },
+  {
+    "sha": "10b1da2cf29b141c6a70985841e8fd006adae45a",
+    "message": "docs: Update CHANGELOG.md for v0.2.4",
+    "author": "Holt Skinner",
+    "date": "2025-06-30T17:57:26Z"
+  },
+  {
+    "sha": "4a0d92eff7bba36757adb7212f7fbf3b2ca8df21",
+    "message": "docs: Homepage Style Updates (#794)\n\n- Minor changes to above-the-fold homepage content\n- Add YouTube Intro Video\n- Add specific modules to Python SDK Docs to decrease compile time\n\n---------\n\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "alan blount",
+    "date": "2025-06-30T17:36:22Z"
+  },
+  {
+    "sha": "866a1d73c00808a4bf11121ac103e79d37dc2106",
+    "message": "docs: Adding fix for PushNotificationConfig object missing \"id\" field details in Table (#806)\n\nAdding detailed description for id field in PushNotificationConfig\nobject in 6.8\n\nFixes #805  🦕",
+    "author": "Israel Ekpo",
+    "date": "2025-06-30T14:45:18Z"
+  },
+  {
+    "sha": "6971b62ecb4b20d211607f2936397bbed1bb3631",
+    "message": "docs: improperly closed parenthesis in Task state description (#790)\n\nThis pull request fixes a small typo in the Task state description. 🦕\nAn extra closing parenthesis was placed incorrectly:\n\nBefore:\n...until it is in a interrupted state ()input-required or\nauth-required)...\n\nAfter:\n...until it is in an interrupted state (input-required or\nauth-required)...\n\nThis change improves clarity and corrects the formatting of the\nsentence.",
+    "author": "kibitzing",
+    "date": "2025-06-26T11:44:36Z"
+  },
+  {
+    "sha": "eb5499cd90947b40b936a064e14f1b9f6e8caab1",
+    "message": "chore: Fix recommended TLS version (#785)\n\nRFC 8446 points to TLS 1.3, but TLS 1.2 is recommended instead. TLS 1.3\nshould be the minimum recommended in this case.",
+    "author": "Loganaden Velvindron",
+    "date": "2025-06-24T10:48:41Z"
+  },
+  {
+    "sha": "147a675ba0e8c049f4892ada8c1c6753dab57cd3",
+    "message": "fix: Typo in delete push notif config (#782)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/a2aproject/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "kthota-g",
+    "date": "2025-06-23T22:55:46Z"
+  },
+  {
+    "sha": "08132ac5c737bb68905fe60d03ccea3d0f7859a6",
+    "message": "docs: Repo Link Updates (#780)",
+    "author": "Holt Skinner",
+    "date": "2025-06-23T19:34:48Z"
+  },
+  {
+    "sha": "ed89cb20b0652ead7f3b03a039e609b0961368b3",
+    "message": "docs: update links (#778)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google-a2a/A2A/blob/main/CONTRIBUTING.md).\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (if necessary)\n\nFixes #777 🦕\n\nSigned-off-by: Shingo OKAWA <shingo.okawa.g.h.c@gmail.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "Shingo OKAWA",
+    "date": "2025-06-23T18:48:32Z"
+  },
+  {
+    "sha": "38643e1deed48344bdec3656c27c8e90fc37e866",
+    "message": "docs: Create GOVERNANCE.md (#779)\n\nAdding initial governance doc\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google-a2a/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "April Kyle Nassi",
+    "date": "2025-06-23T18:47:31Z"
+  },
+  {
+    "sha": "419a497f6814967627d67d3807a785fee4bd78b4",
+    "message": "docs: Add `@TJS-examples` for `AgentProvider` and `AgentExtension` interfaces (#758)\n\nAdd missing `@TJS-examples` annotations to `AgentProvider` and\n`AgentExtension` interfaces to improve TypeScript developer experience.\n\nExamples use Google ecosystem references (ai.google.dev, OAuth 2.0) and\nfollow existing JSDoc patterns in the codebase.\n\nFirst contribution to open source ❤️",
+    "author": "Matteo Murru",
+    "date": "2025-06-23T13:08:53Z"
+  },
+  {
+    "sha": "ebc4157ca87ae08d1c55e38e522a1a17201f2854",
+    "message": "docs!: update spec & doc topic with non-restartable tasks (#770)",
+    "author": "swapydapy",
+    "date": "2025-06-20T17:48:25Z"
+  },
+  {
+    "sha": "c2dbd58e677b68d143ad7b0dff1121f8681a076e",
+    "message": "chore: refer js sdk in readme (#766)",
+    "author": "swapydapy",
+    "date": "2025-06-17T21:30:47Z"
+  },
+  {
+    "sha": "4a5e970ec2c4d92439536e01ea649082b177b8b7",
+    "message": "fix(spec): Make `AgentCard.additionalInterfaces` Optional for backwards compatibility (#760)\n\nThe Python SDK expects a value for `additionalInterfaces` if this is not\noptional. New versions would be a breaking change.\n\nUnit test output\n\n```\nERROR tests/client/test_client.py - pydantic_core._pydantic_core.ValidationError: 1 validation error for AgentCard\nadditionalInterfaces\n  Field required [type=missing, input_value={'name': 'Hello World Age... tags=['hello world'])]}, input_type=dict]\n```\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>",
+    "author": "Holt Skinner",
+    "date": "2025-06-16T18:00:53Z"
+  },
+  {
+    "sha": "14424a69d5435f70e86484b3888ef15817b3ce58",
+    "message": "fix(spec): Fix casing of `types.ts` from #749 (#759)\n\nChange from `snake_case` to `camelCase`",
+    "author": "Holt Skinner",
+    "date": "2025-06-16T17:46:59Z"
+  },
+  {
+    "sha": "b35485e02e796d15232dec01acfab93fc858c3ec",
+    "message": "feat: Add support for multiple transport announcement in AgentCard (#749)\n\nThis is designed to be backward compatible. Existing cards will work and\nbe correct with this update. New fields are added to the agent card and\ndefault interpretation for these are provided to be backward compatible\n\n---------\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: a2a-bot <a2a-bot@google.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>\nCo-authored-by: tomsun28 <tomsun28@outlook.com>\nCo-authored-by: Mike Smith <mikeas@google.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: kthota-g <kcthota@google.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "pstephengoogle",
+    "date": "2025-06-16T17:13:44Z"
+  },
+  {
+    "sha": "2473f69a06625ddc56d47c398dfa785fd1e346a7",
+    "message": "chore(deps): bump brace-expansion from 1.1.11 to 1.1.12 in /types (#757)\n\nBumps [brace-expansion](https://github.com/juliangruber/brace-expansion)\nfrom 1.1.11 to 1.1.12.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a\nhref=\"https://github.com/juliangruber/brace-expansion/releases\">brace-expansion's\nreleases</a>.</em></p>\n<blockquote>\n<h2>v1.1.12</h2>\n<ul>\n<li>pkg: publish on tag 1.x  c460dbd</li>\n<li>fmt  ccb8ac6</li>\n<li>Fix potential ReDoS Vulnerability or Inefficient Regular Expression\n(<a\nhref=\"https://redirect.github.com/juliangruber/brace-expansion/issues/65\">#65</a>)\nc3c73c8</li>\n</ul>\n<hr />\n<p><a\nhref=\"https://github.com/juliangruber/brace-expansion/compare/v1.1.11...v1.1.12\">https://github.com/juliangruber/brace-expansion/compare/v1.1.11...v1.1.12</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a\nhref=\"https://github.com/juliangruber/brace-expansion/commit/44f33b47c5c6a965d507421af43e86cf5971d711\"><code>44f33b4</code></a>\n1.1.12</li>\n<li><a\nhref=\"https://github.com/juliangruber/brace-expansion/commit/c460dbd68e428d147b2080622d8ce126c7a08570\"><code>c460dbd</code></a>\npkg: publish on tag 1.x</li>\n<li><a\nhref=\"https://github.com/juliangruber/brace-expansion/commit/ccb8ac6d4292b7661b677fe048ba6690c877f51f\"><code>ccb8ac6</code></a>\nfmt</li>\n<li><a\nhref=\"https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217\"><code>c3c73c8</code></a>\nFix potential ReDoS Vulnerability or Inefficient Regular Expression (<a\nhref=\"https://redirect.github.com/juliangruber/brace-expansion/issues/65\">#65</a>)</li>\n<li>See full diff in <a\nhref=\"https://github.com/juliangruber/brace-expansion/compare/1.1.11...v1.1.12\">compare\nview</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility\nscore](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=brace-expansion&package-manager=npm_and_yarn&previous-version=1.1.11&new-version=1.1.12)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't\nalter it yourself. You can also trigger a rebase manually by commenting\n`@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits\nthat have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after\nyour CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge\nand block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating\nit. You can achieve the same result by closing it manually\n- `@dependabot show <dependency name> ignore conditions` will show all\nof the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop\nDependabot creating any more for this major version (unless you reopen\nthe PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop\nDependabot creating any more for this minor version (unless you reopen\nthe PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop\nDependabot creating any more for this dependency (unless you reopen the\nPR or upgrade to it yourself)\nYou can disable automated security fix PRs for this repo from the\n[Security Alerts\npage](https://github.com/google-a2a/A2A/network/alerts).\n\n</details>\n\n---------\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "dependabot[bot]",
+    "date": "2025-06-16T15:00:18Z"
+  },
+  {
+    "sha": "f355d3e922de61ba97873fe2989a8987fc89eec2",
+    "message": "feat: Support for multiple pushNotification config per task (#738)\n\n- Support for list pushNotificationConfig for task\n- Support for delete pushNotificationConfig\n- Get pushNotificationConfig by id or by task\n- update protos to use PushNotificationConfig\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>",
+    "author": "kthota-g",
+    "date": "2025-06-14T21:10:46Z"
+  },
+  {
+    "sha": "94a3a002827bc417e4f2d490ddc2fdfdf1716deb",
+    "message": "docs: First pass at extensions documentation (#750)\n\n# Description\n\nMy initial attempt at documenting extensions. I believe there's more\nI'll want to write on this, and there's a lot of room for\ndiagrams/pretty pictures/code samples/content linking. But I figured I'd\nget it started so we have something to share and get feedback early.\n\n---------\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "Mike Smith",
+    "date": "2025-06-14T19:22:30Z"
+  },
+  {
+    "sha": "5160f04a1158d3e9c783953062138181de398ad5",
+    "message": "docs: fix the Task kind define in specification (#755)\n\n# Description\n\nfix the Task kind define in specification \nhttps://google-a2a.github.io/A2A/specification/#61-task-object \n\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google-a2a/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "tomsun28",
+    "date": "2025-06-14T19:20:37Z"
+  },
+  {
+    "sha": "0ae93843903dcba264f89b41fd031086ee17e0dc",
+    "message": "chore(main): release 0.2.3 (#748)\n\n:robot: I have created a release *beep* *boop*\n---\n\n\n## [0.2.3](https://github.com/google-a2a/A2A/compare/v0.2.2...v0.2.3)\n(2025-06-12)\n\n\n### Bug Fixes\n\n* Address some typos in gRPC annotations\n([#747](https://github.com/google-a2a/A2A/issues/747))\n([f506881](https://github.com/google-a2a/A2A/commit/f506881c9b8ff0632d7c7107d5c426646ae31592))\n\n---\nThis PR was generated with [Release\nPlease](https://github.com/googleapis/release-please). See\n[documentation](https://github.com/googleapis/release-please#release-please).\n\nCo-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",
+    "author": "release-please[bot]",
+    "date": "2025-06-12T17:57:34Z"
+  },
+  {
+    "sha": "f506881c9b8ff0632d7c7107d5c426646ae31592",
+    "message": "fix: Address some typos in gRPC annotations (#747)\n\nFix transcoding typos\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "pstephengoogle",
+    "date": "2025-06-12T17:52:25Z"
+  },
+  {
+    "sha": "ee0931a1a0f22209e70127a3fde6b70887e545e3",
+    "message": "ci: Update dispatch to run when any specification file is edited",
+    "author": "Holt Skinner",
+    "date": "2025-06-10T17:27:40Z"
+  },
+  {
+    "sha": "fea538fe9f45d58ebbb53fd859c9432ecf59d459",
+    "message": "docs: Add Docs versioning with `mike` (#739)",
+    "author": "Holt Skinner",
+    "date": "2025-06-09T19:17:59Z"
+  },
+  {
+    "sha": "d66af72658a9dcf73b559c81ef8b2788ce7fea18",
+    "message": "chore(main): release 0.2.2 (#673)\n\n:robot: I have created a release *beep* *boop*\n---\n\n\n## [0.2.2](https://github.com/google-a2a/A2A/compare/v0.2.1...v0.2.2)\n(2025-06-09)\n\n\n### ⚠ BREAKING CHANGES\n\n* Resolve spec inconsistencies with JSON-RPC 2.0\n\n### Features\n\n* Add gRPC and REST definitions to A2A protocol specifications\n([#695](https://github.com/google-a2a/A2A/issues/695))\n([89bb5b8](https://github.com/google-a2a/A2A/commit/89bb5b82438b74ff7bb0fafbe335db7100a0ac57))\n* Add protocol support for extensions\n([#716](https://github.com/google-a2a/A2A/issues/716))\n([70f1e2b](https://github.com/google-a2a/A2A/commit/70f1e2b0c68a3631888091ce9460a9f7fbfbdff2))\n* **spec:** Add an optional iconUrl field to the AgentCard\n([#687](https://github.com/google-a2a/A2A/issues/687))\n([9f3bb51](https://github.com/google-a2a/A2A/commit/9f3bb51257f008bd878d85e00ec5e88357016039))\n\n\n### Bug Fixes\n\n* Protocol should released as 0.2.2\n([22e7541](https://github.com/google-a2a/A2A/commit/22e7541be082c4f0845ff7fa044992cda05b437e))\n* Resolve spec inconsistencies with JSON-RPC 2.0\n([628380e](https://github.com/google-a2a/A2A/commit/628380e7e392bc8f1778ae991d4719bd787c17a9))\n\n---\nThis PR was generated with [Release\nPlease](https://github.com/googleapis/release-please). See\n[documentation](https://github.com/googleapis/release-please#release-please).\n\n---------\n\nCo-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "release-please[bot]",
+    "date": "2025-06-09T16:50:30Z"
+  },
+  {
+    "sha": "22e7541be082c4f0845ff7fa044992cda05b437e",
+    "message": "fix: Protocol should released as 0.2.2\n\nRelease-As: 0.2.2",
+    "author": "Holt Skinner",
+    "date": "2025-06-09T16:47:22Z"
+  },
+  {
+    "sha": "968c650cfe10d90e5639b7469be5e6f732392f6a",
+    "message": "ci: Stop Check Spelling from running on Issue Comment",
+    "author": "Holt Skinner",
+    "date": "2025-06-06T19:20:53Z"
+  },
+  {
+    "sha": "57694c7d5539a08df3aa78e992e82cb87c8a3b08",
+    "message": "docs: Add A2A Intro Video to Docs and README (#733)",
+    "author": "Holt Skinner",
+    "date": "2025-06-06T19:16:24Z"
+  },
+  {
+    "sha": "185187d66af979c2ff527036e9a7a0857b409161",
+    "message": "docs: replace the use of authentication with security (#731)\n\nIn https://github.com/google-a2a/A2A/pull/359, the Agent Card got an\nupdate to replace authentication with security. This doc change in\nenterprise-ready.md just reflects that change.",
+    "author": "Dino Chiesa",
+    "date": "2025-06-06T14:17:08Z"
+  },
+  {
+    "sha": "9c4b05ccdcdbae6ef1ae1b15df028ab57bb2d309",
+    "message": "docs: Cleanup of docs Configuration (#727)",
+    "author": "Holt Skinner",
+    "date": "2025-06-04T20:06:54Z"
+  },
+  {
+    "sha": "70f1e2b0c68a3631888091ce9460a9f7fbfbdff2",
+    "message": "feat: Add protocol support for extensions (#716)\n\n# Description\n\nThis updates the protocol to support Extensions. Extension profiles are\ndocuments that describe modifications or additions to the core A2A\nprofile. AgentCards can declare supported extensions via\n`capabilities.extensions`. This declaration can include additional\ninformation via `capabilities.extensions.params`. Clients can use this\nas a basis for extension negotiation: if a client supports an extension\nthat the server supports, the client can then follow the protocol\ndefined by the extension. This can include, but is not specifically\nlimited to:\n\n1. Requiring specific structure of messages, such as following a\nspecific schema for a DataPart.\n2. Providing additional information in request/response Message and\nArtifact objects via their `metadata` field.\n3. Exposing additional methods beyond the core A2A protocol methods.\n\nMessages and Artifacts can now include an indication of which extensions\nare present in their content. I do not yet know if extension indications\nare necessary on other data structures (such as `MessageSendParams` or\n`TaskStatus`). I'd say extension indications are not strictly necessary\nat all: it's possible to infer that an extension was followed by\ninspecting the message content itself (are the metadata fields you\nexpect present, does the DataPart follow the schema you expect, etc).\nHowever, they are useful for validation and simplifying extension\nimplementation logic: \"you said you followed this extension, so I'll\nvalidate fields are present and then perform my processing\".\n\nFixes #585\n\n---------\n\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "Mike Smith",
+    "date": "2025-06-04T16:17:37Z"
+  },
+  {
+    "sha": "bf5e809c62da1e8fecd5a7321e273cba53057532",
+    "message": "chore(docs): update minimum Python version in tutorial (#724)\n\nPython A2A SDK now supports Python 3.10+\n\nTutorial still says 3.13+, updating to be more inclusive.",
+    "author": "Jack Wotherspoon",
+    "date": "2025-06-04T15:22:31Z"
+  },
+  {
+    "sha": "6808acbbb8bfdd4d8aca2b6d004a458a1c3e0b63",
+    "message": "docs: update next steps documentation (#722)",
+    "author": "Alexi Canales",
+    "date": "2025-06-04T14:29:41Z"
+  },
+  {
+    "sha": "bcf55ad3e775b0cf78402eec5c15018f4845e8b6",
+    "message": "chore: Add buf dependency management (#711)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google-a2a/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕\n\n---------\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: Koichi Shiraishi <zchee.io@gmail.com>",
+    "author": "Rajesh Velicheti",
+    "date": "2025-06-04T04:29:10Z"
+  },
+  {
+    "sha": "2e889e25b7ef61079a381a46cb870b3fdd4b3e98",
+    "message": "ci: Update Lint rules (#720)",
+    "author": "Holt Skinner",
+    "date": "2025-06-03T20:08:50Z"
+  },
+  {
+    "sha": "6b07c3764b6a053a42502c2cb640651efcb9a6d0",
+    "message": "docs: Fix formatting",
+    "author": "Holt Skinner",
+    "date": "2025-06-03T18:08:48Z"
+  },
+  {
+    "sha": "fab2b0deebd61fa78c146171858a4bdf245f1181",
+    "message": "chore: Add custom CSS Styles to SDK Docs",
+    "author": "Holt Skinner",
+    "date": "2025-06-03T17:30:15Z"
+  },
+  {
+    "sha": "2c9321c1d0bc7b5b0f66e931332a6e844c6a88f0",
+    "message": "fix: remove duplicated java_multiple_files option (#717)\n\n# Description\n\nRemove duplicated `java_multiple_files` option on proto file.\n\nSigned-off-by: Koichi Shiraishi <zchee.io@gmail.com>",
+    "author": "Koichi Shiraishi",
+    "date": "2025-06-03T17:08:58Z"
+  },
+  {
+    "sha": "fe8258b36fa2074d7265a55478195849fdedd7af",
+    "message": "chore: Run `protolint --fix` on `a2a.proto` (#718)",
+    "author": "Holt Skinner",
+    "date": "2025-06-03T16:05:14Z"
+  },
+  {
+    "sha": "7bcfc0481108dc6827888985140f1d040de6b9cc",
+    "message": "ci: Update Linter to include all directories (#714)",
+    "author": "Holt Skinner",
+    "date": "2025-06-03T15:44:32Z"
+  },
+  {
+    "sha": "7ec8027b5fd95b4e974ce062f8d7c87297d9fda5",
+    "message": "docs: replace all references to 'MIME type' with 'Media Type' in code (#713)",
+    "author": "MUTHU K BOMMIAH",
+    "date": "2025-06-03T14:38:58Z"
+  },
+  {
+    "sha": "266d1adadc2b037e4730d08127da9cb42ea66ee4",
+    "message": "docs(langgraph): clarify location of __main__.py and test_client.py in app/ (#712)\n\nThe files __main__.py and test_client.py are located in\na2a-samples/samples/python/agents/langgraph/app/, not in the root\ndirectory a2a-samples/samples/python/agents/langgraph/.",
+    "author": "Stojan Gasic Brieva",
+    "date": "2025-06-03T14:37:03Z"
+  },
+  {
+    "sha": "640b52154df6ccec06c9cce3a62262037e95dc34",
+    "message": "ci: Fix Dispatch A2A Update to not include commit message",
+    "author": "Holt Skinner",
+    "date": "2025-06-02T18:45:05Z"
+  },
+  {
+    "sha": "e5754fe9a0870a916bdab7fdb8192bea6a7dc9ab",
+    "message": "ci: Fix Dispatch A2A Update to only include first line (#707)",
+    "author": "Holt Skinner",
+    "date": "2025-06-02T18:40:01Z"
+  },
+  {
+    "sha": "367c16cebb0d13468737da9db9d80550feda7396",
+    "message": "docs: update Python tutorial instructions to correct requirements.txt path (#697)\n\n# Description\nThis PR updates the Setup Your Environment documentation to correct the\nlocation of the requirements.txt file used for Python SDK installation.\nThe file is located in the samples/python directory, and the updated\ncommand reflects this.\n\nNo code changes or functionality modifications were made—this is a\ndocumentation-only update for accuracy.\n\nFixes #698",
+    "author": "Akshay Kokane",
+    "date": "2025-06-02T18:26:25Z"
+  },
+  {
+    "sha": "89bb5b82438b74ff7bb0fafbe335db7100a0ac57",
+    "message": "feat: Add gRPC and REST definitions to A2A protocol specifications (#695)\n\n- Requires adding a new `PushNotificationConfig.id` field to support\nmultiple push notification callbacks per task\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "pstephengoogle",
+    "date": "2025-06-02T18:11:28Z"
+  },
+  {
+    "sha": "dbd2a022b8d5484b51801308b3036ded8e5c0316",
+    "message": "docs: Update link to langgraph agent files in tutorial (#705)",
+    "author": "Holt Skinner",
+    "date": "2025-06-02T17:57:16Z"
+  },
+  {
+    "sha": "fd7044e7f22831ff42b08d1341ebf15fc8bf51fe",
+    "message": "docs: update specification to use \"kind\" (not \"type\") for Part objects (#704)\n\n# Description\n\n1. Several example flows in the documentation still specify \"type\" for\nPart objects\n2. Since this was changed from \"type\" to \"kind\" in version 0.2.1, this\nchange must be reflected",
+    "author": "Osinachi Chukwujama",
+    "date": "2025-06-02T14:26:21Z"
+  },
+  {
+    "sha": "8ba550f5251994424c1cd9f053a6754410d74bb5",
+    "message": "ci: Change `dispatch-a2a-update` to add the commit message (#692)",
+    "author": "Holt Skinner",
+    "date": "2025-05-30T14:32:41Z"
+  },
+  {
+    "sha": "9f3bb51257f008bd878d85e00ec5e88357016039",
+    "message": "feat(spec): Add an optional iconUrl field to the AgentCard (#687)\n\nNew addition to the agentcard: Optional iconUrl field that can point to\nan image icon file for the agent.\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>",
+    "author": "dmandar-google",
+    "date": "2025-05-30T04:56:55Z"
+  },
+  {
+    "sha": "c57d1f93342b3bccaf144adeac716fe8e707a3ae",
+    "message": "docs: Implement robots.txt for search engine optimization (#688)\n\nIntroduces a `robots.txt` file to control web crawler access. This helps\nto:\n- Improve discoverability of public documentation by search engines.\n- Disallow indexing of internal build files, temporary assets, and\nconfiguration.\n- Specify the sitemap location to aid in comprehensive indexing.",
+    "author": "Riktesh Singh",
+    "date": "2025-05-29T21:56:43Z"
+  },
+  {
+    "sha": "de57ce4a4d0a6945ec7a24790568b073f2a86540",
+    "message": "docs: Python tutorial update (#684)\n\n# Description\nUpdated docs to use requirements file added to the a2a-samples repo and\nupdated path for the Start Server section.\n\nRef - https://github.com/google-a2a/a2a-samples/pull/67",
+    "author": "Phill Gibson",
+    "date": "2025-05-29T15:14:33Z"
+  },
+  {
+    "sha": "e7e43d0ee99f15fad3129f1dccac4af6e7294b94",
+    "message": "docs: Convert Tutorial code samples to use embedded snippets (#685)\n\nFollowup to https://github.com/google-a2a/a2a-samples/pull/68",
+    "author": "Holt Skinner",
+    "date": "2025-05-29T15:13:10Z"
+  },
+  {
+    "sha": "7f70662acbc2fa4f17294be4a35526803a988b5a",
+    "message": "fix(#682): update the new repo of code samples (#683)\n\nUpdate the new repo of code samples\n\nFixes #682",
+    "author": "Alen",
+    "date": "2025-05-29T14:12:16Z"
+  },
+  {
+    "sha": "ff564889f77d794246c66acdc120f4c599571c98",
+    "message": "Update partners.md (#677)\n\nadded ath0 and confluent\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google-a2a/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "DJ-os",
+    "date": "2025-05-28T21:00:12Z"
+  },
+  {
+    "sha": "c623de910140eb4779d52539248677e0749bfa06",
+    "message": "ci: Update CODEOWNERS",
+    "author": "Holt Skinner",
+    "date": "2025-05-28T18:19:30Z"
+  },
+  {
+    "sha": "ec7a8db6b78c7305818b17f31426a238b9856d5d",
+    "message": "chore: Update CODEOWNERS",
+    "author": "Holt Skinner",
+    "date": "2025-05-28T18:06:55Z"
+  },
+  {
+    "sha": "9f3c7986acb61729f63962a8da99107a32ff6c2c",
+    "message": "ci: Update issue-metrics to use actual repo name (#675)",
+    "author": "Holt Skinner",
+    "date": "2025-05-28T16:24:15Z"
+  },
+  {
+    "sha": "3a6c6b04a0103bbe09e18a6b876955464fc01e7b",
+    "message": "ci: Create issue-metrics.yml (#672)\n\n# Description\n\nAdd monthly issue with a report of issue metrics as described in:\nhttps://github.com/github/issue-metrics/tree/main",
+    "author": "alan blount",
+    "date": "2025-05-28T16:09:17Z"
+  },
+  {
+    "sha": "628380e7e392bc8f1778ae991d4719bd787c17a9",
+    "message": "fix(spec): Spec inconsistencies and a minor bug (#322)\n\n## Problem\n\nIn client-server messaging, the A2A protocol uses the [JSON-RPC\n2.0](https://www.jsonrpc.org/specification) format, and the protocol\nspecification is written using the [JSON-Schema\nspecification](https://json-schema.org/). Fully complying with the\nstandards can help validate the payloads more accurately and help better\ntest different client and server implementations.\n\nIn addition to making the A2A spec more compliant with the mentioned\nstandards, changes in this PR are meant to fix a few minor bugs in the\nA2A protocol spec (mismatches from what was implemented in the sample\nA2A server and clients.\n\nAddresses issue #353.\n\n## Summary of changes\n* Makes field \"id\" required on requests and responses. This field is\nimportant because, according to the JSON RPC 2.0 spec, a message that\ndoes not have an \"id\" is considered a notification, and the callee does\nnot have to send a response to such requests. Similarly, without the\n\"id\" on the responses, the caller cannot correlate the responses to the\npending requests, meaning that fully JSON-RPC-compliant clients would\nnot be able to resolve such RPC calls.\n\n---\n*Edit: clearer wording + add issue references*\n\n*Edit2: the scope of this PR has been reduced due to other updates\nfixing parts of the spec, summary items were edited to reflect what has\nalready been addressed in other PRs.*\n\n---\n\n## (OLD) Summary of changes\n\n* Add a missing definition for \"TaskSendParams.acceptedOutputModes\"\n(described in #354). Fixed in #599.\n\n* Remove \"default\" values for \"const\" fields. Compliance with JSON\nschema, version `>=draft-6` and reduce ambiguity.\nhttps://json-schema.org/understanding-json-schema/reference/const\nFixed in #599\n\n* Make fields \"jsonrpc\" and \"id\" required on requests and responses.\nCompliance with JSON-RPC 2.0.\n\n* Make fields \"error.code\" and \"error.message\" required on errors. Fixed\nin #599.\n\n* In a few places, sort non-top-level dict keys to make them more\naligned with the pydantic JSON schema outputs. Since now, we are\ndiscouraged from editing the spec manually, this item also drops out of\nthe scope of our concerns.\n\n* The initial commit in this PR also included cleaning up several\nunnecessary \"null\" types, which were addressed more thoroughly in #352.\n\n## (OLD) Additional notes\n\nWhile I sorted dictionaries within each model so that the keys of each\nmodel would be in the same order as the pydantic-based scripts' exports,\nat the same time, **I decided not to sort the top-level keys**\n(`$defs/ModelKey`). Because doing so would make the diff ugly and harder\nto read the applied changes. The top-level key sorting can be done\nafterward.\n\n---------\n\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: kthota-g <kcthota@google.com>",
+    "author": "darkhaniop",
+    "date": "2025-05-27T23:20:24Z"
+  },
+  {
+    "sha": "9dcade010e2db154572f0e64095faf3bc3421e08",
+    "message": "docs: Minor formatting edits for the FilePart interface (#649)\n\n# Description\n\nMarkdown table after FilePart interface was not rendering correctly.\nComment for the uri field in FileWithUri was not correct.",
+    "author": "Darrel",
+    "date": "2025-05-27T22:40:52Z"
+  },
+  {
+    "sha": "729988a3f5ea809b64a3c3298707739d051712f1",
+    "message": "refactor: Remove Samples/Demo/test directories and change references to google/A2A (#668)",
+    "author": "Holt Skinner",
+    "date": "2025-05-27T21:31:32Z"
+  },
+  {
+    "sha": "563da7e3fd9f845157bf1af22516b57f0b920cca",
+    "message": "docs: corrected a2a-sdk gitHub repository link in documentation (#667)",
+    "author": "xie qizhuo",
+    "date": "2025-05-27T18:07:14Z"
+  },
+  {
+    "sha": "e9d6a9b84562a07ff4441a6766c28d9665ed7cfe",
+    "message": "docs: Readme on a2a_mcp (#664)",
+    "author": "Rajesh Velicheti",
+    "date": "2025-05-27T18:06:43Z"
+  },
+  {
+    "sha": "c778e66ead9be711f1b4f9370dd0e3d4c0794c3f",
+    "message": "chore(main): release 0.2.1 (#666)\n\n:robot: I have created a release *beep* *boop*\n---\n\n\n## [0.2.1](https://github.com/google/A2A/compare/v0.2.0...v0.2.1)\n(2025-05-27)\n\n\n### Features\n\n* Add a new boolean for supporting authenticated extended cards\n([#618](https://github.com/google/A2A/issues/618))\n([e0a3070](https://github.com/google/A2A/commit/e0a3070fc289110d43faf2e91b4ffe3c29ef81da))\n* Add optional referenceTaskIds for task followups\n([#608](https://github.com/google/A2A/issues/608))\n([5368e77](https://github.com/google/A2A/commit/5368e7728cb523caf1a9218fda0b1646325f524b))\n\n---\nThis PR was generated with [Release\nPlease](https://github.com/googleapis/release-please). See\n[documentation](https://github.com/googleapis/release-please#release-please).\n\n---------\n\nCo-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "release-please[bot]",
+    "date": "2025-05-27T17:41:14Z"
+  },
+  {
+    "sha": "01638ed1a74844caa91472e2dfe14ff239af899e",
+    "message": "ci: Add release-please.yml (#665)\n\nHandles Automatic Releases of versions",
+    "author": "Holt Skinner",
+    "date": "2025-05-27T17:35:27Z"
+  },
+  {
+    "sha": "ab0509dc7a04aa909c985779b21b7e8040ee5042",
+    "message": "docs: update llms txt refer with version 0.2.1 (#657)",
+    "author": "tomsun28",
+    "date": "2025-05-27T17:07:25Z"
+  },
+  {
+    "sha": "8580f0a5ed49961fcca4bb2086252426aadea799",
+    "message": "docs: Convert Spec doc to use includes from `types.ts` instead of hard-coding (#663)\n\nPrevents file from becoming out of date.",
+    "author": "Holt Skinner",
+    "date": "2025-05-27T16:38:11Z"
+  },
+  {
+    "sha": "d7e61a05e0346313f93a8bdf09f9d5a61964edd3",
+    "message": "Feat: A2A-MCP Interplay (#635)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "Rajesh Velicheti",
+    "date": "2025-05-27T16:06:50Z"
+  },
+  {
+    "sha": "09c36bd94f74ea1a1a4e0db5f65ba12b102171ba",
+    "message": "docs: Update partners.md (#638)\n\nUpdating partner list after I/O announcment",
+    "author": "DJ-os",
+    "date": "2025-05-22T20:55:45Z"
+  },
+  {
+    "sha": "9b7b8f6e429fd24fdcc4de880d6c16f2ffdddda9",
+    "message": "docs: Update SDK Doc to show all enum values (#637)\n\nFixes #631 🦕",
+    "author": "Holt Skinner",
+    "date": "2025-05-22T19:56:30Z"
+  },
+  {
+    "sha": "5d7de59ae51351797c9e80a1b5fbcd05f39e0d9d",
+    "message": "docs: Update docs for new authenticated expanded agent card feature (#625)\n\nUpdate docs for new authenticated expanded agent card feature\n\n---------\n\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "dmandar-google",
+    "date": "2025-05-22T18:37:15Z"
+  },
+  {
+    "sha": "4c72ad3ef9369718272f47a61e8e3224527cc7a3",
+    "message": "fix: Update uv.lock files for update packages (#636)",
+    "author": "pstephengoogle",
+    "date": "2025-05-22T18:03:27Z"
+  },
+  {
+    "sha": "024f9c2e9be4ac91b8af6810d986a8fc160c30c4",
+    "message": "docs: Update \"Session\" to \"Context\" (#624)\n\nFixes #617 🦕",
+    "author": "Holt Skinner",
+    "date": "2025-05-22T17:30:12Z"
+  },
+  {
+    "sha": "ae54ebf982fc12b87255beeae3dc50569bbaf84a",
+    "message": "Update ADK agents to use ADK v1.0 (#632)\n\n- includes some fixes for breaking changes where methods are either made\nasync that weren't are made sync and were async",
+    "author": "pstephengoogle",
+    "date": "2025-05-22T17:25:14Z"
+  },
+  {
+    "sha": "38c1fa5b23ee4dcd51e8dd6a4df2d7e4a6f0bd28",
+    "message": "chore: fix typo in types.ts doc comment (#626)\n\n\n\nSigned-off-by: Shingo OKAWA <shingo.okawa.g.h.c@gmail.com>",
+    "author": "Shingo OKAWA",
+    "date": "2025-05-22T16:25:31Z"
+  },
+  {
+    "sha": "73fe0d07f610f6038d7dc640bbdeee1ca11d2a82",
+    "message": "ci: Add dispatch-a2a-update Action for when a2a.json is updated (#634)\n\n- This allows triggering of the types.py generation in google/a2a-python\n- Requirement for https://github.com/google/a2a-python/pull/92",
+    "author": "Holt Skinner",
+    "date": "2025-05-22T16:23:49Z"
+  },
+  {
+    "sha": "b2fd9876b49f903adaf6c38bf0e67b42501ae462",
+    "message": "ci: Update Schema generation for forks",
+    "author": "Holt Skinner",
+    "date": "2025-05-21T19:51:45Z"
+  },
+  {
+    "sha": "d49241cbc9e18d1047e5c6391c5fe84edde4ba02",
+    "message": "ci: Add Auto-generation of `a2a.json` from `types.ts` (#620)\n\nUse @a2a-bot to auto-generate `specification/json/a2a.json` whenever\n`types/src/types.ts` is updated in a PR.\n\n---------\n\nCo-authored-by: a2a-bot <a2a-bot@google.com>",
+    "author": "Holt Skinner",
+    "date": "2025-05-21T19:26:05Z"
+  },
+  {
+    "sha": "4d4f04f8a6c309b3b4a8acc22bffd7dba3dc8190",
+    "message": "chore: Formatting for types.ts and a2a.json (#543)",
+    "author": "Holt Skinner",
+    "date": "2025-05-21T18:48:09Z"
+  },
+  {
+    "sha": "39a02d3d542e25dff4208c36391241e2c271609b",
+    "message": "chore: Update spelling allowlist (#622)",
+    "author": "Holt Skinner",
+    "date": "2025-05-21T18:41:49Z"
+  },
+  {
+    "sha": "dc11f515bc42a1f2b787c38461df4ef30cb08772",
+    "message": "chore: update spec doc with referenceTaskIds (#621)",
+    "author": "swapydapy",
+    "date": "2025-05-21T18:33:50Z"
+  },
+  {
+    "sha": "e0a3070fc289110d43faf2e91b4ffe3c29ef81da",
+    "message": "feat: Add a new boolean for supporting authenticated extended cards (#618)\n\nNew boolean field `supportsAuthenticatedExtendedCard` that if true,\nindicates an extended agent card is available at an authenticated\nendpoint.",
+    "author": "dmandar-google",
+    "date": "2025-05-21T17:35:55Z"
+  },
+  {
+    "sha": "cafd1a6cbdba905f1748e9c47e7a632974b3a5f6",
+    "message": "ci: Adjust Spelling/Lint Allowlist (#619)",
+    "author": "Holt Skinner",
+    "date": "2025-05-21T17:28:45Z"
+  },
+  {
+    "sha": "b5f23e885d540ed8ab395b6a31d7a6a1ebf7ab01",
+    "message": "fix: Explicitly exclude node_modules when generating json schema. (#613)\n\nCo-authored-by: kthota-g <kcthota@google.com>",
+    "author": "dmandar-google",
+    "date": "2025-05-21T17:23:49Z"
+  },
+  {
+    "sha": "6743038e9f789f571d7f3d9af79fbb053bb61a73",
+    "message": "chore: Use push notifier from sdk (#612)",
+    "author": "swapydapy",
+    "date": "2025-05-21T04:33:33Z"
+  },
+  {
+    "sha": "0e085c26574401b558224a72a78dfec45e22922a",
+    "message": "fix: Python: Semantic Kernel sample bug fix & updates (#579)\n\n# Description\n\nThe Semantic Kernel Python Agent sample has a bug related to checking\nfor a non-existent `_thread_id`. The underlying SDK was fixed and the\nsample does not have the change to properly check for the `.id` property\non the thread.\n\nAdditionally, we fixed the `on_intermediate_message` callback as part of\nthe Semantic Kernel agent framework, which properly emits the\n`FunctionCallContent` and `FunctionResultContent` during function\ncalling. The sample is now updated to reflect this, along with updated\ninterim messsaging to the host during function call processing.\n\nThe PR also includes a few smaller updates in the README to make sure\nthe dev starts the host with the proper port that the SK agent server\nuses.\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [X] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕\n\n---------\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "Evan Mattson",
+    "date": "2025-05-20T23:51:21Z"
+  },
+  {
+    "sha": "65d539db3ed8c36a0c104b28ca8cbac7b82e7c7c",
+    "message": "docs: Update Information about spec generation (#610)",
+    "author": "Holt Skinner",
+    "date": "2025-05-20T21:35:29Z"
+  },
+  {
+    "sha": "5368e7728cb523caf1a9218fda0b1646325f524b",
+    "message": "feat: Add optional referenceTaskIds for task followups (#608)\n\n### Problem\nClients need to follow up or refine previously created tasks by agents.\n\n### Proposal\n**New Task in same contextId (Preferred)**\n\nContext can be thought of as a larger goal from a client perspective.\nClients can use the same contextId from the previous task and send a\nmessage for refinement or followup. Agents should spawn up new tasks.\nTasks cannot restart processing from terminal states (Completed, Failed\nand Cancelled).\n\n### Proposed API Change\n\n* Addition of optional `referenceTaskIds` field in the `Message` object.\n* Optional addition of `referenceArtifactId` in `part` metadata of\n`Message` object.",
+    "author": "swapydapy",
+    "date": "2025-05-20T19:51:13Z"
+  },
+  {
+    "sha": "2d386d49e4a992e6f184050a0c4d34611a5bf3f4",
+    "message": " chore: update docstrings for types (#607)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "kthota-g",
+    "date": "2025-05-20T19:33:46Z"
+  },
+  {
+    "sha": "3eda07ed4eadc76dffcd1d4e69c1c41b6a21d5f2",
+    "message": "fix: cleanup json formatting (#605)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "kthota-g",
+    "date": "2025-05-20T17:41:31Z"
+  },
+  {
+    "sha": "f99d96a24547b09667696feb06f2278dc51144ec",
+    "message": "fix: Update tutorial with 0.2.0 changes (#604)\n\n- requires Python 3.13\n- AgentAuthentication has been removed from the SDK with the\nintroduction of SecuritySchemes\n\nCo-authored-by: Mike Smith <mikeas@google.com>",
+    "author": "kthota-g",
+    "date": "2025-05-20T15:33:10Z"
+  },
+  {
+    "sha": "bfc16ba4a9e6985dc518ef19321ee9d6c80b64a0",
+    "message": "fix(demo): Fix bugs in demo app (#601)\n\n- Address changes for ADK upgrade\n- Fix bug with incorrect type -> kind replacement\n\n---------\n\nCo-authored-by: Mike Smith <mikeas@google.com>",
+    "author": "pstephengoogle",
+    "date": "2025-05-20T15:23:20Z"
+  },
+  {
+    "sha": "081fa20bdfede24922c49e8e56fcdfbee0db0c28",
+    "message": "docs: Update SDK Reference page (#603)\n\n- Move SDK Reference before Tutorial in TOC\n- Add `pip install` command to SDK Reference page",
+    "author": "Holt Skinner",
+    "date": "2025-05-20T14:43:19Z"
+  },
+  {
+    "sha": "67472e9908ed85c2ea395da64b65929675b3b8c3",
+    "message": "docs: Python SDK Initial Doc Generation (#570)\n\nCreate Python SDK Documentation using mkdocstring",
+    "author": "Holt Skinner",
+    "date": "2025-05-20T14:38:15Z"
+  },
+  {
+    "sha": "50a6d6d916a604926d079545119eda6f50289efb",
+    "message": "chore: update main with changes from next (#599)\n\nChanges from `next` to be merged into `main`",
+    "author": "kthota-g",
+    "date": "2025-05-20T07:41:29Z"
+  },
+  {
+    "sha": "bafba773a24cc73546e92cfdc54145912acf6aea",
+    "message": "chore: Doc updates for 0.2.1 (#598)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "kthota-g",
+    "date": "2025-05-20T04:42:44Z"
+  },
+  {
+    "sha": "ce95d60c49c44511b73a391c798e8e8c814bce66",
+    "message": "docs: Update Tutorial and README to use A2A Python SDK from PyPi (#597)",
+    "author": "Holt Skinner",
+    "date": "2025-05-20T02:59:13Z"
+  },
+  {
+    "sha": "44bdc0919a855b247ad0b4c3d1d2a2066177a157",
+    "message": "chore: auth0 sample (Auth for Headless Agents) (#507)\n\n## Auth for Headless Agents sample\n\nThis sample demonstrates how headless agent's tools can leverage\n[Auth0's Client-Initiated Backchannel Authentication (CIBA)\nflow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow)\nto request user authorization via push notification and obtain tokens\nfor accessing separate APIs.\n\nAdditionally, it shows agent-level authorization via the [OAuth 2.0\nClient Credentials\nflow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow).\n\n### How It Works\n\nAllows an A2A client to interact with an external HR Agent, owned by\nStaff0, to verify whether the provided user data corresponds to an\nactive Staff0 employee.\nWith the user’s authorization (via push notification), the Staff0 HR\nAgent can access the internal company HR API to retrieve their\nemployment details.\n\n```mermaid\nsequenceDiagram\n   participant User as John Doe\n   participant A2AClient as A2A Client\n   participant Auth0 as Auth0 (staff0.auth0.com)\n   participant HR_Agent as Staff0 HR Agent\n   participant HR_API as Staff0 HR API\n   \n   A2AClient->>HR_Agent: Get A2A Agent Card\n   HR_Agent-->>A2AClient: Agent Card\n   A2AClient->>Auth0: Request access token (client credentials)\n   Auth0-->>A2AClient: Access Token\n   A2AClient->>HR_Agent: Is John Doe, with email jdoe@staff0.com, an active employee at Staff0? (Access Token)\n   HR_Agent->>Auth0: Request access token (CIBA)\n   Auth0->>User: Push notification to approve access\n   User-->>Auth0: Approves access\n   Auth0-->>HR_Agent: Access Token\n   HR_Agent->>HR_API: Retrieve employment details (Access Token)\n   HR_API-->>HR_Agent: Employment details\n   HR_Agent-->>A2AClient: Yes, John Doe is an active employee.\n```\n\n```shell\nuv run --prerelease=allow test_client.py\n\n======= Agent Card ========\n{\"name\":\"Staff0 HR Agent\",\"description\":\"This agent handles external verification requests about Staff0 employees made by third parties.\",\"url\":\"http://0.0.0.0:10050/\",\"version\":\"1.0.0\",\"capabilities\":{\"streaming\":true,\"pushNotifications\":false,\"stateTransitionHistory\":false},\"defaultInputModes\":[\"text\",\"text/plain\"],\"defaultOutputModes\":[\"text\",\"text/plain\"],\"skills\":[{\"id\":\"is_active_employee\",\"name\":\"Check Employment Status Tool\",\"description\":\"Confirm whether a person is an active employee of the company.\",\"tags\":[\"employment\"],\"examples\":[\"Is John Doe (with email jdoe@staff0.com) an active employee?\"]}]}\n\n=========  Starting a New Task ========\n\nWhat do you want to send to the agent? (:q or quit to exit): Does John Doe with email jdoe@staff0.com work at Staff0?\n\nFetching agent access token from https://staff0.us.auth0.com/oauth/token...\nDone.\n\nstream message => role: user, type: text, text: Does John Doe with email jdoe@staff0.com work at Staff0?\nstream message => role: agent, type: text, text: Looking up the employment status...\nstream message => role: agent, type: text, text: Processing the employment status...\nstream message => role: agent, type: text, text: Looking up the employment status...\nstream message => role: agent, type: text, text: Processing the employment status...\nstream artifact => type: text, text: Yes, John Doe is an active employee at Staff0.\n```",
+    "author": "Sebastian Iacomuzzi",
+    "date": "2025-05-19T17:39:37Z"
+  },
+  {
+    "sha": "18998ab681e886d8bb0512d2b358040290e97d18",
+    "message": "ci: Cleanup of GitHub Actions to only run on Pull Request (#568)",
+    "author": "Holt Skinner",
+    "date": "2025-05-16T21:27:26Z"
+  },
+  {
+    "sha": "f0df3e97b95a0a1045f0263146c9da0fbfb503f1",
+    "message": "docs: Update partners.md (#566)\n\n# Description\nFixing link - Missing closing bracket for a partner site\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:",
+    "author": "DJ-os",
+    "date": "2025-05-16T18:43:08Z"
+  },
+  {
+    "sha": "a0fad5c8d72e83dac1efaa29453c202ed73a695b",
+    "message": "docs: Update partners.md (#564)\n\nAdding partners who expressed support via interest form. Final update\nbefore I/O\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "DJ-os",
+    "date": "2025-05-16T17:40:51Z"
+  },
+  {
+    "sha": "d6a66106cd13af50617572e19ba0e03dfb74cc8b",
+    "message": "docs: Change the Python version to 3.11 (#558)\n\n# Description\n\nMatch the actual version information in\n[pyproject.toml](https://github.com/google/A2A/blob/main/samples/python/pyproject.toml).\n\n---------\n\nCo-authored-by: Andy <tianxingzhivlog@gmail.com>",
+    "author": "Andy Tien",
+    "date": "2025-05-16T14:31:32Z"
+  },
+  {
+    "sha": "ddb49de6ee115b254e6c14d981ceb521b2b0bb93",
+    "message": "chore: Fix some markdown syntax errors (#549)",
+    "author": "XiHeee",
+    "date": "2025-05-15T19:04:47Z"
+  },
+  {
+    "sha": "248f3a328e9b1dc537d781c99e44246d2f2d73a4",
+    "message": "docs: tutorials/python/2-step.md fixed pip cmd (#550)\n\nMade minor fix to pip command under step titled \"Install the A2A SDK and\nits dependencies:\"\n\n# Description\n\nNoticed that the command in step 2 - to install a2a and it's\ndependencies had a slight error. Fixed it.",
+    "author": "Mayuresh K",
+    "date": "2025-05-15T17:15:30Z"
+  },
+  {
+    "sha": "fe7604394047d681559aefdbab64023410d35271",
+    "message": "ci: Add config for conventional commit lint (#554)",
+    "author": "Holt Skinner",
+    "date": "2025-05-15T17:12:34Z"
+  },
+  {
+    "sha": "8a44cfffd93b994f70f551d36cdeb188c1bebf48",
+    "message": "fix(spec): Optimize the camel case naming. (#534)\n\n# Description\n\nfeat: Optimize the camel case naming.\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (if necessary)\n\nCo-authored-by: Andy Tian <tianxingzhivlog@gmail.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "Andy Tien",
+    "date": "2025-05-14T22:16:16Z"
+  },
+  {
+    "sha": "d734f4e53c84dc230f01ba2d6229bdce0170d00d",
+    "message": "feat: Support multiple file attachments in CLI (#542)\n\nThe CLI now prompts the user to select multiple file paths to attach to\na task message. Previously, it only supported attaching a single file.\nThis enhancement allows users to provide more context to the agent by\nincluding multiple relevant files. Error handling for file not found and\nother read errors has also been added.\n\n# Description\n\nThis Pull Request updates the CLI tool located at\n`/samples/python/hosts/cli/__main__.py` to allow users to attach\nmultiple files when sending a task message to an agent.\n\nThe previous implementation only allowed selecting a single file. This\nchange introduces a loop that repeatedly prompts the user for file paths\nuntil an empty input is provided, collecting all specified paths. Each\nfile is then read, base64 encoded, and added to the `message['parts']`\nlist with the type 'file'.\n\nError handling has been added to catch `FileNotFoundError` and other\npotential exceptions during file reading, ensuring that the CLI skips\ninvalid paths and continues processing other files.\n\nThis enhancement improves the usability of the CLI for tasks that\nrequire multiple file inputs.\n\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n(Assuming the changes follow the guide)\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification. (Done in the\ncommit message)\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (no docs to be updated to my\nknowledge)",
+    "author": "Jean Ibarz",
+    "date": "2025-05-14T21:51:13Z"
+  },
+  {
+    "sha": "9b306f7bd0dd83c4e1f7af7f8c86d90b0107abbe",
+    "message": "ci: protecting 'links' workflow against failing runs on forks (#498)\n\n# Description\n\nAs per title, protecting workflow checking links against failing runs\non forks.",
+    "author": "Didier Durand",
+    "date": "2025-05-14T21:23:04Z"
+  },
+  {
+    "sha": "129f7675e66eb429e0b515a7022da1398eb95967",
+    "message": "docs: Add link to redirect from common/ to the new SDK",
+    "author": "Holt Skinner",
+    "date": "2025-05-14T21:15:49Z"
+  },
+  {
+    "sha": "0c03b736b9ce1c57a95b5811323461b16826970e",
+    "message": "docs: Update partners.md (#540)\n\nadding Telekom",
+    "author": "Michael Vakoc",
+    "date": "2025-05-14T21:04:41Z"
+  },
+  {
+    "sha": "40f4b2f6e894bddd8aef3a2e47f0a4592e3f3cd6",
+    "message": "refactor: Move SDK to New Repository (#518)\n\nPython SDK codebase is now in https://github.com/google/a2a-python",
+    "author": "Holt Skinner",
+    "date": "2025-05-14T18:14:28Z"
+  },
+  {
+    "sha": "51cfe6f385131a61959fb84de5c94c0340385a8a",
+    "message": "ci: Add CODEOWNERS (#537)",
+    "author": "Holt Skinner",
+    "date": "2025-05-14T17:04:56Z"
+  },
+  {
+    "sha": "04cd93dc52302842ac0c4bc2a2fb16cdfa8e5b75",
+    "message": "docs: Move llms.txt to docs site (#525)\n\nWill be available at https://google.github.io/A2A/llms.txt",
+    "author": "Holt Skinner",
+    "date": "2025-05-14T15:54:23Z"
+  },
+  {
+    "sha": "175cecd8dab1dd1d66d6c5b8b0ec7e5390a543d9",
+    "message": "ci: Remove default assignee for Issues (#528)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T21:30:40Z"
+  },
+  {
+    "sha": "3ba6bff6954cac703ba5a7ad95141ca9a920363a",
+    "message": "docs: Add redirect for spec-json to point to the a2a.json file (#526)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T19:55:13Z"
+  },
+  {
+    "sha": "5d0a06d74992b4bf49d9f7cd39871c8317fafb2f",
+    "message": "docs: Add redirect for `/topics` to What is A2A? (#523)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T18:55:02Z"
+  },
+  {
+    "sha": "64b927e33bfac3b877c1a044d911b73856d766d3",
+    "message": "docs: Fix Broken links (#522)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T18:45:25Z"
+  },
+  {
+    "sha": "4f67f0d4820f4d67dd3773d28a17bd120cef3a8a",
+    "message": "docs: Adjust A2A SVG Logo viewbox (#521)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T18:11:48Z"
+  },
+  {
+    "sha": "72cc285c6810e7784307923112f5a801282a6e80",
+    "message": "docs: Add Redirect from `tutorials/` to the tutorial intro (#520)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T17:47:10Z"
+  },
+  {
+    "sha": "54fbc875f30df4f487514ad89f6d0421a20d2164",
+    "message": "chore: upgrade genkit to the latest version (1.8.0) (#477)",
+    "author": "Pavel Jbanov",
+    "date": "2025-05-13T15:52:25Z"
+  },
+  {
+    "sha": "c1b417b98e8a634885d4de6e6631c0fafec044e5",
+    "message": "ci: Update Spelling allowlist (#519)",
+    "author": "Holt Skinner",
+    "date": "2025-05-13T15:51:57Z"
+  },
+  {
+    "sha": "386e5df2acf7c05f8c11597f375316f3438ab7fb",
+    "message": "docs: Fixed minor sentence-break issue (#517)\n\nFixed minor sentence-break issue.",
+    "author": "Kumar Dhanagopal",
+    "date": "2025-05-13T15:08:56Z"
+  },
+  {
+    "sha": "73c760b35c03c0490b6ca1c9bd4fd3c6e49bc1a0",
+    "message": "docs: add links to partners in partners.md (#512)\n\n# Description\n\n- fix some incorrect content in readme.md\n- add links to partners in partners.md\n\n---------\n\nCo-authored-by: Andy Tian <tianxingzhivlog@gmail.com>",
+    "author": "Andy Tien",
+    "date": "2025-05-13T15:08:20Z"
+  },
+  {
+    "sha": "b5db58516f4329dff4bc53f423c68f0ead815d9c",
+    "message": "fix: Broken adk agent tool functions (#510)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (if necessary)",
+    "author": "swapydapy",
+    "date": "2025-05-13T02:06:25Z"
+  },
+  {
+    "sha": "a8a6652901ed1dfd318c1a0675a5eee14930384f",
+    "message": "Update partners.md (#509)\n\nSplitting Red Hat\n\n# Description\n\nUpdatign Red hat partner listing\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "DJ-os",
+    "date": "2025-05-13T00:30:26Z"
+  },
+  {
+    "sha": "a9b9c92fa00c31da3b7162e6b281c19b874d513a",
+    "message": "Update partners.md (#508)\n\n# Description\nAdding Redhat to supported partners\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "DJ-os",
+    "date": "2025-05-12T23:18:49Z"
+  },
+  {
+    "sha": "2d44597bc3f6c912a95347a8bada59e9243efc7c",
+    "message": "docs: Refactoring Python Tutorial (#474)",
+    "author": "Holt Skinner",
+    "date": "2025-05-12T19:29:47Z"
+  },
+  {
+    "sha": "68f3b71a9844ee23317fc5ecac3bc6e83e635733",
+    "message": "docs: fix some incorrect content in the documentation (#469)\n\nCo-authored-by: Andy Tian <tianxingzhivlog@gmail.com>",
+    "author": "Andy Tien",
+    "date": "2025-05-12T19:25:59Z"
+  },
+  {
+    "sha": "db91513f021959d58cdf15355079fc3e231ec5f2",
+    "message": "docs: fix google_adk bash cd (#486)",
+    "author": "Jeremy Kenn",
+    "date": "2025-05-12T19:22:00Z"
+  },
+  {
+    "sha": "ceeefac0dc37a847a2f3227fc00b117adf4825e1",
+    "message": "docs: Update README.md\n\nFormatting",
+    "author": "Holt Skinner",
+    "date": "2025-05-12T17:20:21Z"
+  },
+  {
+    "sha": "51a55647f755407e9e6d888c541a67bc7c736bbc",
+    "message": "docs: a2a-python-sdk Added License&Contributing (#492)\n\nHello, I added \"License&Contributing\" to the README of the Python SDK to\nmake it more compliant with the standards of open-source projects.\n\nCo-authored-by: Andy Tian <tianxingzhivlog@gmail.com>",
+    "author": "Andy Tien",
+    "date": "2025-05-12T15:23:01Z"
+  },
+  {
+    "sha": "c959937b4e7c819e30f38ed51df7d087033b1c73",
+    "message": "feat: Update to latest version of sdk (#483)\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "kthota-g",
+    "date": "2025-05-12T15:22:04Z"
+  },
+  {
+    "sha": "b67527f2b4a7e7ce9e40bd003bbcf3d4b95367d6",
+    "message": "docs: fix links to google.github.io/A2A in README (#473)\n\nThis pull request updates the `README.md` file to fix broken links and\nimprove clarity in the \"Review key topics\" section.\n\nDocumentation updates:\n\n* Corrected the URLs for key topics to use hyphens instead of\nunderscores, ensuring the links are functional.\n* Updated the \"Push Notifications\" link to point to a more detailed\nsection about disconnected scenarios.\n\n- [x] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [x] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [x] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [x] Appropriate docs were updated (if necessary)",
+    "author": "Robin-Manuel Thiel",
+    "date": "2025-05-10T02:27:21Z"
+  },
+  {
+    "sha": "710040a4438272fd982f1078ccb477c4d50f7aa2",
+    "message": "Update partners.md (#482)\n\nadding Distyl.ai as partner",
+    "author": "Michael Vakoc",
+    "date": "2025-05-10T02:25:13Z"
+  },
+  {
+    "sha": "cdcbe6d34408196b63b65046e77377848f6d5e22",
+    "message": "docs: Cleanup of Images (#476)\n\n- Change Logo files to SVG\n  - Change Logo in Docs to White for visibility\n- Remove unused images\n- Move demo architecture diagram to `demo/` folder",
+    "author": "Holt Skinner",
+    "date": "2025-05-09T19:25:53Z"
+  },
+  {
+    "sha": "c09716e0fe50fe618371f3a55d355a764006fdb3",
+    "message": "docs(refactor): Refactoring of Documentation (#453)\n\n- Structuring of Information Architecture\n- Combine `specification/*.md` files into a single `specification.md` in\nRFC format.\n  - Combine `documentation.md` into `index.md`\n  - Rename `push-notifications.md` into `streaming-and-async.md`\n  - Create `topics/key-concepts.md` and `topics/what-is-a2a.md`\n- Remove duplicated content between README/index files.\n- Hide Python Tutorial from Nav until SDK is released.",
+    "author": "Holt Skinner",
+    "date": "2025-05-09T17:50:37Z"
+  },
+  {
+    "sha": "c88a08d1fb48c12c856fc7763929bd113b8044ce",
+    "message": "feat: Add prototype version of Python SDK to A2A Repo (#471)\n\n# Description\n\nInitial prototype of A2A Python SDK, for educational purposes only",
+    "author": "Holt Skinner",
+    "date": "2025-05-09T17:43:12Z"
+  },
+  {
+    "sha": "445905a3a5f08cbd84062159978058c90961a298",
+    "message": "ci: Change Linters to only check `docs/` and `specification/` folders (#460)",
+    "author": "Holt Skinner",
+    "date": "2025-05-08T19:14:44Z"
+  },
+  {
+    "sha": "6351e4c45abaf2f0a6817d66540660af277e7772",
+    "message": "feat: add MSFT to partners.md (#455)",
+    "author": "alan blount",
+    "date": "2025-05-08T14:54:27Z"
+  },
+  {
+    "sha": "35f51ce9debe016541111e4a34b2d88fb1d830d2",
+    "message": "Revert \"docs:Update README.md\" (#451)\n\nReverts google/A2A#419",
+    "author": "Holt Skinner",
+    "date": "2025-05-07T17:35:36Z"
+  },
+  {
+    "sha": "51e29ac7ac34c140dc9473f32a98fcc14a8f15cd",
+    "message": "chore: Add missing agents in agents/README.md (#448)\n\n# Description\n\nIn `samples/python/agents/README.md`, add missing sample agent\ndescriptions for\n* **AG2 MCP Agent with A2A Protocol**,\n* **Marvin Contact Extractor Agent**,\n* and **Semantic Kernel Agent**\n\nFixes #447 🦕",
+    "author": "darkhaniop",
+    "date": "2025-05-07T15:06:49Z"
+  },
+  {
+    "sha": "6fdff58a495972227bea16eccb8407cffbaefc89",
+    "message": "ci: Ignore partners.md from spell-check (#449)\n\n\n---------\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "alan blount",
+    "date": "2025-05-07T15:05:11Z"
+  },
+  {
+    "sha": "abde40dfec7a7da28d9a2b5198c7dbc99ca7025a",
+    "message": "Update task_manager.py (#440)\n\nThere is a problem with \"return None\" in func\n\"get_push_notification_info\" that the code cannot be accessed. I deleted\nit\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [√ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [√ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [√ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format)\n- [ √ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "qiansuo1",
+    "date": "2025-05-07T12:57:08Z"
+  },
+  {
+    "sha": "2b0e8ba2e95a756b2fb6abfb91ca3e5555036b8d",
+    "message": "Update partners.md (#435)\n\nUpdating partners and pulling up form to join to top of the page",
+    "author": "Michael Vakoc",
+    "date": "2025-05-07T00:46:41Z"
+  },
+  {
+    "sha": "a52fba0ee828046aeba6fd60e516ecbfeabe0e61",
+    "message": "chore: add .git-blame-ignore-revs for formatting commit (#429)",
+    "author": "Holt Skinner",
+    "date": "2025-05-06T20:17:03Z"
+  },
+  {
+    "sha": "43f264ec32b92ed0aede95dc2f17ff52820101af",
+    "message": "fix: add Vertex AI compatibility for CrewAI sample (#428)\n\n# Add VertexAI compatibility for CrewAI sample\nIt also fixes a timeout issue in sample A2A Client",
+    "author": "Mark Salacinski",
+    "date": "2025-05-06T19:16:21Z"
+  },
+  {
+    "sha": "8a9c3ef0cc2b803532d60b3c5f1e904810390b97",
+    "message": "chore: Add `.vscode/settings.json` for formatting (#427)",
+    "author": "Holt Skinner",
+    "date": "2025-05-06T18:39:46Z"
+  },
+  {
+    "sha": "f4caff0061efd818a33c93319a0163ebaf8285df",
+    "message": "docs: Update README.md (#419)\n\ntypo in docs for well-known path",
+    "author": "Riccardo Carlesso",
+    "date": "2025-05-06T17:37:30Z"
+  },
+  {
+    "sha": "70276bdd1215236941fb21ae6e1a02c52bca1030",
+    "message": "fix(sample): correct variable name in return statement for clarity (#205)\n\nFixes #309\n\n---------\n\nCo-authored-by: Holt Skinner <13262395+holtskinner@users.noreply.github.com>",
+    "author": "Lee",
+    "date": "2025-05-05T20:58:15Z"
+  },
+  {
+    "sha": "2dba80783d767abc5ccd357f9215cbd97c1fae27",
+    "message": "ci: Add Stale Issue/PR checker (#414)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T20:54:48Z"
+  },
+  {
+    "sha": "213803062112ec2a9238fb4908d6d39e32c1792c",
+    "message": "docs: Update README.md: fixing bold markdown on 5. (#273)\n\nHi,\n\nJust added 2 ** to fix bold markdown for section 5.\n\nDidier",
+    "author": "Didier Durand",
+    "date": "2025-05-05T20:50:25Z"
+  },
+  {
+    "sha": "3a4cd735b3293f7dc69fa309b7c870c5ed1a7e90",
+    "message": "chore: Update demo readme (#334)\n\n- Add \"interact\" instructions to README.md (step 4)\n- Format README.md",
+    "author": "alan blount",
+    "date": "2025-05-05T20:34:04Z"
+  },
+  {
+    "sha": "b1e7df03fbea8e0cba022ef4bb03d49269e1e75b",
+    "message": "docs: Fix typo in 9-ollama-agent.md (#393)\n\n# Description\n\nFix typo  in 9-ollama-agent.md of python tutorial of docs dir",
+    "author": "Daniel Dai",
+    "date": "2025-05-05T20:32:23Z"
+  },
+  {
+    "sha": "9c9e12d055fb0ab009eca1cc75723319e789d209",
+    "message": "fix: IndexError:list index out of range (#316)\n\nFixes #308 \n\nAdd timeout params for A2Aclient",
+    "author": "GhostC",
+    "date": "2025-05-05T20:31:34Z"
+  },
+  {
+    "sha": "59d63dc7f557c91bfbc93bf8909af70fd3af3904",
+    "message": "fix: many broken links (#413)\n\nUse mkdocs style relative paths to file.md.\nFix several old paths.\nAdd redirects to mkdocs.\nReplace HTML prev/next links with markdown.\nFormat markdown.",
+    "author": "alan blount",
+    "date": "2025-05-05T20:23:17Z"
+  },
+  {
+    "sha": "dc7739e64af0a5324ed835406cf6749182ab1cb1",
+    "message": "docs: Fix Broken Links (#412)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T19:59:14Z"
+  },
+  {
+    "sha": "0f8d9750bcb17f6b8b9f48793b46f7b8510cae24",
+    "message": "chore: Run `ruff`/`autoflake`/`pyupgrade` formatting on all files (#411)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T19:35:26Z"
+  },
+  {
+    "sha": "ac0c6feec4083c9fbd12207e348e0d92358327f3",
+    "message": "ci: Update superlinter to run Ruff (#363)\n\nFixes #355\nFixes #356",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T19:15:32Z"
+  },
+  {
+    "sha": "5c0dad4e13b89ee68e9e60b20f8ea77a57e2fd1d",
+    "message": "fix: Replace deprecated `utcnow()` with `datetime.now(UTC)` (#396)\n\n# Description\n\nPython 3.12 has deprecated the `utcnow()` method. Updated to use the\nrecommended `datetime.now(UTC)` approach instead.",
+    "author": "kimsr96",
+    "date": "2025-05-05T18:46:48Z"
+  },
+  {
+    "sha": "19649b4d888ec353b6fc30179420c030709bc3a6",
+    "message": "docs: Init Specification Documentation (#362)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T18:44:20Z"
+  },
+  {
+    "sha": "41ae9716e8dd995712158cfbba3160d20675f545",
+    "message": "docs: Convert Sample Messages page to use Tabs for Request/Response (#385)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T18:21:42Z"
+  },
+  {
+    "sha": "dbd4a05c6dfe1a55ce74b91a55ecfedac8127614",
+    "message": "ci: Add `.jscpd.json` for copy-paste ignore on samples (#410)",
+    "author": "Holt Skinner",
+    "date": "2025-05-05T18:20:59Z"
+  },
+  {
+    "sha": "851ad1ad14fbb2da85ebbe5d87a4290e69ce124d",
+    "message": "ci: protecting Github workflows against failing runs on repo forks (#376)\n\n# Description\n\nCurrently, GitHub workflows executing on repo forks fail due to\nincorrect env.\n\nThis PR blocks them to execute when not on reference repo.\n\nBest,\n\nDidier",
+    "author": "Didier Durand",
+    "date": "2025-05-05T18:17:03Z"
+  },
+  {
+    "sha": "8432a389098fa4993a784d18e48dfbc123f4e044",
+    "message": "docs: fix typo (#403)",
+    "author": "Simon Ilyushchenko",
+    "date": "2025-05-05T18:15:21Z"
+  },
+  {
+    "sha": "0c7e0f7bcb30faaea2034177c8f944bb75987226",
+    "message": "chore(samples/python): Lower `requires-python` to `>=3.11` (#407)\n\n\n\nFixes #406 🦕",
+    "author": "David de la Iglesia Castro",
+    "date": "2025-05-05T17:50:43Z"
+  },
+  {
+    "sha": "f8cff21a15667fd5223946574a9ed33ecccd6151",
+    "message": "regenerate uv.lock file (#401)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [ ] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [ ] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [ ] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [ ] Appropriate docs were updated (if necessary)\n\nFixes #<issue_number_goes_here> 🦕",
+    "author": "kthota-g",
+    "date": "2025-05-04T17:45:54Z"
+  },
+  {
+    "sha": "4d50971a30136bb96af631efdd5aaca87c9b5c6e",
+    "message": "feat: Agent to talk to Enterprise Data (#345)\n\nfeat(agents): Add MindsDB Enterprise Data Agent\n\nThis PR introduces a new agent that enables natural language querying\nacross federated data sources using MindsDB. The agent leverages\nMindsDB's AI capabilities to translate natural language questions into\nSQL queries and analyze data across multiple sources.\n\nKey features:\n- Natural language to SQL translation for MindsDB queries\n- Support for querying across federated data sources (databases, data\nlakes, SaaS)\n- Integration with MindsDB's AI models (\"Minds\")\n- Example queries and comprehensive setup documentation\n\nTechnical details:\n- Requires Python 3.9+\n- Uses MindsDB API for data access\n- Configurable through environment variables (API key and Mind name)\n- Includes sample queries demonstrating capabilities\n\nDocumentation:\n- Added detailed README with setup instructions\n- Included environment configuration guide\n- Added example queries for users\n\nTesting:\n- Verified agent functionality with demo Mind\n(Sales_Data_Expert_Demo_Mind)\n- Tested natural language query translation\n- Confirmed A2A client connectivity",
+    "author": "Jorge Torres",
+    "date": "2025-05-02T16:27:18Z"
+  },
+  {
+    "sha": "89e81f6b122153d0af09080ff9f99b896caabfbe",
+    "message": "feat: Revert test changes for docs CI/CD testing (#369)\n\n# Description\n\nThis PR reverts test docs changes that were used to test CI/CD for docs\nand publish workflow.\n\nSee #347 for full context.\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [X] Appropriate docs were updated (if necessary)",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T21:42:37Z"
+  },
+  {
+    "sha": "5f6a3841aedc25cd4e1f987f50bda132e291c1a1",
+    "message": "feat: Testing Docs CI publish and build workflow (#368)\n\n# Description\n\nThis PR makes an intentional docs change to test CI/CD for docs and\npublish workflow.\n\nSee #347 for full context.\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [X] Appropriate docs were updated (if necessary)",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T21:40:07Z"
+  },
+  {
+    "sha": "832dcc972957bea62acb372e71a661da7f36db68",
+    "message": "feat: Test docs updates (#367)\n\n# Description\n\nThis PR makes an intention docs change to test CI/CD for docs and\npublish workflow.\n\nSee #347 for full context.\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [X] Appropriate docs were updated (if necessary)",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T21:32:19Z"
+  },
+  {
+    "sha": "369d025d831bf2e74871920ed45932413b12fb34",
+    "message": "feat: A2A docs rework; docs on docs; docs build and publish automation (#366)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [X] Appropriate docs were updated (if necessary)\n\nFixes #349.\n\nThis PR is for docs rework stage 3 of 3. See #347 for full context.",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T21:27:45Z"
+  },
+  {
+    "sha": "b5fecbe3176bf7d3c45c1e5b763f0d919ea099a7",
+    "message": "feat: Rework documentation, reorganize pages (Stage 2/3) (#365)\n\n# Description\n\nThank you for opening a Pull Request!\nBefore submitting your PR, there are a few things you can do to make\nsure it goes smoothly:\n\n- [X] Follow the [`CONTRIBUTING`\nGuide](https://github.com/google/A2A/blob/main/CONTRIBUTING.md).\n- [X] Make your Pull Request title in the\n<https://www.conventionalcommits.org/> specification.\n- [X] Ensure the tests and linter pass (Run `nox -s format` from the\nrepository root to format).\n- [X] Appropriate docs were updated (if necessary)\n\nFixes https://github.com/google/A2A/issues/348.\n\nThis PR is for docs rework stage 2 of 3. See\nhttps://github.com/google/A2A/issues/347 for full context.\n\nScreenshot at this point:\n\n![Screenshot 2025-05-01 at 4 12\n05 PM](https://github.com/user-attachments/assets/c081c8b3-24ee-4164-91f1-a17bceff7e28)",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T21:15:18Z"
+  },
+  {
+    "sha": "2f9aa7edd4038dba4dda8d37f30fc67e60128d1a",
+    "message": "feat: Initial commit of A2A docs source and mkdocs site (#350)\n\nFixes #346.\n\nThis PR is for docs rework stage 1 of 3. See #347 for full context.\n\nScreenshot at this point:\n\n![Screenshot 2025-04-30 at 12 55\n15 PM](https://github.com/user-attachments/assets/3771ab84-77b9-4b55-82bc-3d38386e55f7)\n\n---------\n\nCo-authored-by: Holt Skinner <holtskinner@google.com>",
+    "author": "Kristopher Overholt",
+    "date": "2025-05-01T16:05:18Z"
+  },
+  {
+    "sha": "0453e32461a1919be8a75e8349f3fb844ef97a8e",
+    "message": "Update the Task Manager in the Google ADK sample to be reusable (#318)\n\nThis commit decouples the `TaskManager` in\n`samples/python/agents/google_adk` to be reusable by all Google ADK\nsamples.\n\n**Note:** This could potentially be refactored into a Google ADK\nspecific `common` directory.",
+    "author": "Jeremy Whitlock",
+    "date": "2025-05-01T00:26:47Z"
+  },
+  {
+    "sha": "16d9fe158fafd1326311d749e2c98a7c1107398c",
+    "message": "Remove 'null' support for JSON Schema types (#352)\n\nThis commit also makes running the A2A specification tests much simpler.\n\nFixes #264 🦕",
+    "author": "Jeremy Whitlock",
+    "date": "2025-05-01T00:24:57Z"
+  },
+  {
+    "sha": "cec2b9973a9a27a3f9ee08604c18f2616407740f",
+    "message": "Undo commit",
+    "author": "Kristopher Overholt",
+    "date": "2025-04-30T17:28:50Z"
+  },
+  {
+    "sha": "887707773ae64c53368fb49806338f92e4d6587f",
+    "message": "Merge remote-tracking branch 'refs/remotes/origin/main'",
+    "author": "Kristopher Overholt",
+    "date": "2025-04-30T17:25:02Z"
+  },
+  {
+    "sha": "17bc1e178eb7798e52ece1f2d6684eab69f55ab4",
+    "message": "feat: Initial commit of mkdocs + docs source files",
+    "author": "Kristopher Overholt",
+    "date": "2025-04-30T17:24:18Z"
+  },
+  {
+    "sha": "3a118f6a4701c8c73882b07ad4b57ec243ca35ae",
+    "message": "feat(samples): AG2 (autogen) + MCP Example Agent Server Implementation (#230)\n\nThis PR adds a sample agent implementation using AG2 (autogen)\nframework:\n\n- Demonstrates integration of AG2's `AssistantAgent` with the A2A\nprotocol\n- Showcases interoperability between A2A and Model Context Protocol\n(MCP)\n- Implements a specialized YouTube content agent using `mcp-youtube`\nserver\n  - Features structured output processing with OpenAI\n\nThis sample highlights how A2A can facilitate connections between\ndiverse agent frameworks, with task requests handled by A2A while\nspecialized processing is managed by framework-specific tools.\n\n---------\n\nCo-authored-by: Davor Runje <zlikowski@gmail.com>",
+    "author": "jason",
+    "date": "2025-04-30T17:14:55Z"
+  },
+  {
+    "sha": "502a4d0fdd73bb0b8afb8163907c601e08f40525",
+    "message": "ci: Add Issue Type to Issue Templates (#328)",
+    "author": "Holt Skinner",
+    "date": "2025-04-28T21:00:17Z"
+  },
+  {
+    "sha": "5ab1e12ef912730d27c6ae9262bb02aa67707d45",
+    "message": "ci: Add Templates for Issues and Pull Requests (#327)",
+    "author": "Holt Skinner",
+    "date": "2025-04-28T20:53:50Z"
+  },
+  {
+    "sha": "9fff16e07cc47d3947f99d8dea8318e2e1bec03a",
+    "message": "ci: Ruff linter and formatter (#164)\n\nAdded : .ruff.toml",
+    "author": "Rajesh Velicheti",
+    "date": "2025-04-28T20:52:41Z"
+  },
+  {
+    "sha": "13ba747c57432730f8994595b956fad62929ba23",
+    "message": "ci: Add Spell Check Action (#326)",
+    "author": "Holt Skinner",
+    "date": "2025-04-28T20:41:02Z"
+  },
+  {
+    "sha": "d8842db4d4f89c9510722f1e7a81960f31cd0378",
+    "message": "fix(google_adk_sample): enable Vertex AI configuration via environment variables (#325)\n\nThis PR updates the `samples/python/agents/google_adk/__main__.py`\nscript\nto allow the agent to be configured with Vertex AI.\n\nThe __main__.py script for the google_adk sample agent previously\nenforced a GOOGLE_API_KEY check, preventing usage with Vertex AI\neven when GOOGLE_GENAI_USE_VERTEXAI was set.\n\nThis change makes the GOOGLE_API_KEY check conditional, bypassing\nit if GOOGLE_GENAI_USE_VERTEXAI is true, allowing the underlying\nADK LlmAgent to use Vertex AI configuration.",
+    "author": "Juan Bustos",
+    "date": "2025-04-28T20:39:48Z"
+  },
+  {
+    "sha": "07166f5cb829405f5facab5f206c1c45d07062db",
+    "message": "ci: Repository Management Init (#324)\n\n- Add more entries to `.gitignore`\n- Add Google Employees section in CONTRIBUTING\n- Add Superlinter\n- Add SECURITY.md",
+    "author": "Holt Skinner",
+    "date": "2025-04-28T20:12:35Z"
+  },
+  {
+    "sha": "b52c2ebb381f2769159af90e35ac975313f59fd4",
+    "message": "Update README.md (#291)\n\nAdding Partner interest form",
+    "author": "DJ-os",
+    "date": "2025-04-25T22:15:53Z"
+  },
+  {
+    "sha": "b325be72a0fbe2bb54c427074e81021c5547cbd7",
+    "message": "[Documentation] Clarify apache license in README.md (#37)\n\n* made more clear apache license\n\n* changed license to blue.",
+    "author": "Andor Kesselman",
+    "date": "2025-04-25T22:15:12Z"
+  },
+  {
+    "sha": "00200adc3e7d9c4882a44cf25a2516b590b24fb9",
+    "message": "use e.value instead of e.values[0] (#254)",
+    "author": "Huanhuan Sun",
+    "date": "2025-04-23T17:37:50Z"
+  },
+  {
+    "sha": "1cf454299271c3f9dcf4b59bc4a98fedd05f01bb",
+    "message": "Fix grammatical errors in host_agent root_instruction (#272)",
+    "author": "dongyunpeng",
+    "date": "2025-04-23T17:28:40Z"
+  },
+  {
+    "sha": "e3c657383684b44fa497160ba18d7fa8f6c864ee",
+    "message": "Add type attribute to TextParts (#279)",
+    "author": "kthota-g",
+    "date": "2025-04-22T18:53:36Z"
+  },
+  {
+    "sha": "fb2f1dcd34308a4b7df1bdaffacaa929e0b1b258",
+    "message": "Update agent.py: fixing 1 typo (#241)\n\nHi,\r\nFixing typo: \"who handle\" -> \"who handles\"\r\n\r\nSee commit diff for details\r\n\r\nDidier",
+    "author": "Didier Durand",
+    "date": "2025-04-21T21:25:23Z"
+  },
+  {
+    "sha": "5973f6b23209581096cb28d6c09348a60720b32b",
+    "message": "Fix llamaindex sync request (#263)",
+    "author": "kthota-g",
+    "date": "2025-04-21T17:54:09Z"
+  },
+  {
+    "sha": "ac70620c6ee745a1311750383b8a811c9e6e4b78",
+    "message": "Fixes for LlamaIndexTaskManager. Fixes #239 (#252)\n\nTested locally to confirm the changes resolve the issue. Working as expected,",
+    "author": "kthota-g",
+    "date": "2025-04-20T20:30:18Z"
+  },
+  {
+    "sha": "805c57f218cf8c13664f75c4e88cf90e2924e18b",
+    "message": "Update README.md",
+    "author": "kthota-g",
+    "date": "2025-04-20T19:47:46Z"
+  },
+  {
+    "sha": "2f61858d4c1a6b6d76decd77df76588e3960ed6e",
+    "message": "Update readme instructions (#251)",
+    "author": "kthota-g",
+    "date": "2025-04-20T19:44:43Z"
+  },
+  {
+    "sha": "70471d0173e1bca3d73414ecf929c218228b6cfa",
+    "message": "add marvin example to `samples/python` (#106)\n\n* merge conflict\n\n* merge conflict\n\n* update readme\n\n* small fix\n\n* multi turn\n\n* improve and fix multiturn\n\nclean up\n\nupdate link\n\nupdate type\n\nreadme\n\n* clean up\n\nnit\n\n* lockfile\n\n* update readme\n\n* address review comments\n\nclarify",
+    "author": "nate nowack",
+    "date": "2025-04-18T22:39:07Z"
+  },
+  {
+    "sha": "9485e26a9f89e66fc17e95a213fa4fda06b283d2",
+    "message": "Update Adk Agent README.md (#146)\n\n* Update README.md",
+    "author": "Marco",
+    "date": "2025-04-18T20:35:53Z"
+  },
+  {
+    "sha": "63d5041f1898208af10e433e6b4d6abb30456dc6",
+    "message": "Update push_notification_listener.py: 'in' rather than 'in' (#206)\n\nHi,\r\n\r\nGiven the sentence 'in' is the right word and not 'in'\r\n\r\nBest,\r\n\r\nDidier",
+    "author": "Didier Durand",
+    "date": "2025-04-18T01:31:05Z"
+  },
+  {
+    "sha": "739a08a5091f94d25df2ac2c5fb698483220d2e4",
+    "message": "Update async_poller.py: fixing 1 typo (#201)\n\nHi,\r\n\r\nAdding missing 'l' to invisible\r\n\r\nDIdier",
+    "author": "Didier Durand",
+    "date": "2025-04-17T16:56:15Z"
+  },
+  {
+    "sha": "7e48a953a0e2b243da50fe194c2afde8327f0c54",
+    "message": "chore: link to uv docs in READMEs (#209)\n\n* chore: add link to UV\n\n* chore: add uv link to adk agent\n\n* chore: update uv link in crewai README\n\n* chore: add uv link to langgraph README.md\n\n* chore: add uv link to llama_index README.md\n\n* chore: add uv link to semantickernel README.md",
+    "author": "Jack Wotherspoon",
+    "date": "2025-04-17T16:55:26Z"
+  },
+  {
+    "sha": "4100ff4c33911526381b33f66d956ecd639e3f92",
+    "message": "Add Google API Key Configuration in demo app UI (#168)\n\n* feat: Add Google API Key input dialog in demo app for improved user experience\n\n* docs: Update README to clarify API key setup instructions\n\n* feat: Add Google API Key configuration in settings page.\n\n* feat: Enhance API key config in demo ui to support Vertex AI usage.\n\n* docs: Update demo README to include authentication options for API Key and Vertex AI.\n\n* style: remove divider when not needing API Key setting section.\n\n* fix: change file redirection from overwrite to append for API key in demo ui",
+    "author": "HaohanTsao",
+    "date": "2025-04-17T15:39:34Z"
+  },
+  {
+    "sha": "4916ca107121c74d55d386084935b4c4870ca623",
+    "message": "Update form_render.py: fixin 1 typo (#203)\n\nHi,\r\n'an' is not appropriate here: 'a' is the right form.",
+    "author": "Didier Durand",
+    "date": "2025-04-17T15:02:50Z"
+  },
+  {
+    "sha": "305b0bba7d805877c01a3b0f81499c047d916e29",
+    "message": "Update host_agent.py: fix verb instead of noun (#204)\n\nHi,\r\n\r\nChanged 'response' to 'respond' as verb is needed in the constuct.\r\n\r\nSee commit diff for details\r\n\r\nDidier",
+    "author": "Didier Durand",
+    "date": "2025-04-17T14:59:11Z"
+  },
+  {
+    "sha": "a8c5420b91f03dcce0280e0f5964b4052ca8a315",
+    "message": "Add missing a2a-samples deps in hosts/* (#208)\n\nAfter subproject-specific and common dependencies were split, we missed\nadding \"a2a-samples\" to pyproject.toml in hosts/cli and\nhosts/multiagent. This patch fixes that.\n\nRefs: PR #182",
+    "author": "darkhaniop",
+    "date": "2025-04-17T14:58:28Z"
+  },
+  {
+    "sha": "be588f48b3a1c3786f16fd34a6ddf105e140b018",
+    "message": "[New Sample] LlamaIndex Workflows Sample Integration (#179)\n\n* add llama-index example\n\n* update CLI to accept file attachments\n\n* update readmes\n\n* remaining nits\n\n* change default port\n\n* update supported content types\n\n* readme note",
+    "author": "Logan",
+    "date": "2025-04-17T03:58:23Z"
+  },
+  {
+    "sha": "37604a5044987076557d677475eb6b41176d8d21",
+    "message": "Split common and agent-specific dependencies (#182)\n\n* Split LangGraph agent-specific dependencies\n\nThe added agents/langgraph/pyproject.toml defines a subproject for the\nLangGraph-based CurrencyAgent and contains its dependencies. This commit\npartially addresses issue #181.\n\nRefs: issue #181\n\n* Split sample google_adk agent and hosts deps\n\nAdds pyproject.toml definitions to decouple dependencies in subprojects:\n* agents/google_adk\n* hosts/cli\n* hosts/multiagent\n\nRefs: issue #181, PR #182\n\n* Remove agent-specific deps from common definitions\n\nWith this change adding samples/python to a sample agent or external\nproject will only add packages necessary for modules in \"common\" and\n\"utils\". Together with the previous two commits,\n* 0b85b58098030fb1582558f05c54897165c64785\n* 33c258dcfe7b4931d6d0d8371bcaf7a8affba8a9\nThis closes issue #181.\n\nRefs: issue #181, PR #182.\n\n* Remove unused agents/langgraph/uv.lock\n\nThis is a leftover file from the development stage. In the latest config, only\nuv.lock from the parent dir `samples/python`, is being used.\n\n* Update run instructions in hosts/cli/README.md",
+    "author": "darkhaniop",
+    "date": "2025-04-17T02:58:59Z"
+  },
+  {
+    "sha": "0c9813eecdbbf36d64d41bab432125ee560a6860",
+    "message": "Add New Semantic Kernel Agent Sample (#149)\n\n* Add Semantic Kernel Agent Sample\n\n* update README with link to SK sample README\n\n* Make Semantic Kernel sample its own project.\n\n* Flatten structure for simplicity. Update README.\n\n* Allow Py 3.10+\n\n* PR feedback\n\n* Update task_manager.py",
+    "author": "Evan Mattson",
+    "date": "2025-04-16T23:18:40Z"
+  },
+  {
+    "sha": "e2d6addfc6c8fe18501f0130a668427d0ae92d70",
+    "message": "refactor: extract function response handling to improve maintainability (#145)\n\nMoves the function response handling logic from adk_content_to_message into a separate method _handle_function_response to improve code organization and maintainability while following existing codebase patterns. This change reduces cognitive complexity by isolating the response handling logic in its own method.",
+    "author": "Jordan Docherty",
+    "date": "2025-04-16T18:59:25Z"
+  },
+  {
+    "sha": "bb8374659e7ed1e3903a966d981b28f6eb8cf93c",
+    "message": "fix: using the updated variable (#89)",
+    "author": "z2z23n0",
+    "date": "2025-04-16T18:21:27Z"
+  },
+  {
+    "sha": "fc8a00b879f33145e0b49e5181f17bd683460af6",
+    "message": "Fix error: invoking agent: 'generator' object is not subscriptable (#189)\n\nI had this type of exception in my local sources while running this ADK example\r\n\r\nINFO:common.server.task_manager:Upserting task b7ebdb35-a1ad-4b57-920e-4112b69b2a50\r\nERROR:task_manager:Error invoking agent: 'generator' object is not subscriptable\r\nERROR:common.server.server:Unhandled exception: Error invoking agent: 'generator' object is not subscriptable\r\nINFO:     ::1:60297 - \"POST / HTTP/1.1\" 400 Bad Request\r\n\r\nAnd actually the run method signature is\r\n\r\ndef run(\r\n      self,\r\n      *,\r\n      user_id: str,\r\n      session_id: str,\r\n      new_message: types.Content,\r\n      run_config: RunConfig = RunConfig(),\r\n  ) -> Generator[Event, None, None]:\r\n\r\nSo it returns the Generator object which is not subscriptable as it is trying to be in this code example\r\n\r\nFix me if there is a easier solution but this approach helped me to run E2E implementation with my custom UI in TypeScript and agent made with Python",
+    "author": "Egor Baranov",
+    "date": "2025-04-16T18:19:28Z"
+  },
+  {
+    "sha": "d572f9c093358ab13a94d1b267c9d549f8b25698",
+    "message": "Add remote agent events to event stream (#191)",
+    "author": "pstephengoogle",
+    "date": "2025-04-16T18:18:58Z"
+  },
+  {
+    "sha": "1f52a784c98e902e3a6e568cf2e9b20d1bbaead1",
+    "message": "Part (TextPart | FilePart | DataPart) type property should't be optional (#187)\n\n* Part (TextPart | FilePart | DataPart) type property should't be optional\n\nWhen we're doing requests between TypeScript client and Python server there are some problem related to types:\r\n\r\nPart = TextPart | FilePart | DataPart in a client side contains an optional property type that doesn't go when doing request to a backend.\r\n\r\nBut on a Python server side there are a strict type validation\r\n\r\nPart = Annotated[Union[TextPart, FilePart, DataPart], Field(discriminator=\"type\")]\r\n\r\nThat throws an exception when type is not provided \r\n\r\n\r\n{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"error\": {\r\n    \"code\": -32600,\r\n    \"message\": \"Request payload validation error\",\r\n    \"data\": [\r\n      {\r\n        \"type\": \"union_tag_not_found\",\r\n        \"loc\": [\r\n          \"tasks/send\",\r\n          \"params\",\r\n          \"message\",\r\n          \"parts\",\r\n          0\r\n        ],\r\n        \"msg\": \"Unable to extract tag using discriminator 'type'\",\r\n        \"input\": {\r\n          \"text\": \"hi\"\r\n        },\r\n        \"ctx\": {\r\n          \"discriminator\": \"'type'\"\r\n        },\r\n        \"url\": \"https://errors.pydantic.dev/2.10/v/union_tag_not_found\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n\r\nSo this is why we need to make it required.\n\n* Update README.md",
+    "author": "Egor Baranov",
+    "date": "2025-04-16T17:29:26Z"
+  },
+  {
+    "sha": "006f7d36c0504c722f9fbbb44ea57645259663ad",
+    "message": "fix: typo for ADK (#183)",
+    "author": "Polong Lin",
+    "date": "2025-04-16T15:50:19Z"
+  },
+  {
+    "sha": "71b5a485a9cf844a531e8a8c821507d9358dd4b9",
+    "message": "Update README.md for Contributing section (#34)",
+    "author": "Archendra Yadav",
+    "date": "2025-04-15T22:14:40Z"
+  },
+  {
+    "sha": "7fba74e52ebb2a4311041fe482d3715caf020b9d",
+    "message": "JSON schema fixes for #173 and #172 (#175)",
+    "author": "kthota-g",
+    "date": "2025-04-15T20:37:08Z"
+  },
+  {
+    "sha": "43fd3e372409d321a29ff868e6de644b951f208f",
+    "message": "Add history array to Task schema definition (#167)",
+    "author": "James Heller",
+    "date": "2025-04-15T17:26:12Z"
+  },
+  {
+    "sha": "cd9eb5e66219e4afab4e35985b2514bda5943b1f",
+    "message": "Update JS agent README and add env checks (#165)",
+    "author": "kthota-g",
+    "date": "2025-04-14T23:51:22Z"
+  },
+  {
+    "sha": "8e8b3b64edfe5e3fda6f23cd03558e7d5aab7298",
+    "message": "Alphabetize sample agents list in README (#147)",
+    "author": "Kshitiz",
+    "date": "2025-04-14T22:48:46Z"
+  },
+  {
+    "sha": "172c44c99882d620ed85d631b0d1c278391d6dc1",
+    "message": "Merge pull request #154 from beauduffy/fix-ui-event-list\n\nfix: missing ID field in StateEvent conversion",
+    "author": "Rajesh Velicheti",
+    "date": "2025-04-14T22:01:30Z"
+  },
+  {
+    "sha": "24a2c09718040a52b7c12d477aa3aa6f0728f8bd",
+    "message": "fix: add event ID to state conversion and clean up whitespace",
+    "author": "beauduffy",
+    "date": "2025-04-14T14:06:00Z"
+  },
+  {
+    "sha": "72b60eb6e6f28284a1d7b3723f4f59057153e7c4",
+    "message": "Merge pull request #135 from LingJingMaster/main\n\nFix Crewai_CLI default connection",
+    "author": "Rajesh Velicheti",
+    "date": "2025-04-13T16:07:47Z"
+  },
+  {
+    "sha": "a3a7dcb299272b3d4f694c326875db5d34fa30d4",
+    "message": "Update README.md",
+    "author": "Ling_Jing",
+    "date": "2025-04-13T13:57:48Z"
+  },
+  {
+    "sha": "5c0e182a1d8450df4aa44e41a270e26efc13cbb6",
+    "message": "Update README.md",
+    "author": "Ling_Jing",
+    "date": "2025-04-13T13:54:40Z"
+  },
+  {
+    "sha": "957f7ee816108e5f35bdf5ce220cb5eca94fc9d6",
+    "message": "Update __main__.py",
+    "author": "Ling_Jing",
+    "date": "2025-04-13T13:48:05Z"
+  },
+  {
+    "sha": "9a55f3f331181ac30f4ebfb54f2b436a0c8bdd60",
+    "message": "Update __main__.py",
+    "author": "Ling_Jing",
+    "date": "2025-04-13T07:04:12Z"
+  },
+  {
+    "sha": "20fe313b79a0902852bed5eebf5568af5122e60d",
+    "message": "Fix: Update UI components to respect dark mode theme (#114)",
+    "author": "Brayden Moon",
+    "date": "2025-04-12T18:48:37Z"
+  },
+  {
+    "sha": "8c8e0eabfe0558159044455e917b38c7472a9fe1",
+    "message": "Merge pull request #99 from google/polling\n\nPush large payloads to a file server model to avoid heap growth",
+    "author": "pstephengoogle",
+    "date": "2025-04-11T16:35:54Z"
+  },
+  {
+    "sha": "d49976c66bedf76df271db03ea44df7274b1f4e7",
+    "message": "Push large payloads to a file server model to avoid heap growth\n\n- Images are now served from /messages/file/{file_id}\n- This allows browser to cache images and not pass over state\n- Also fixed fake application manager for changes to pending messages\n- Added a pre-built test image into the fake application manager",
+    "author": "Phil Stephens",
+    "date": "2025-04-11T14:26:09Z"
+  },
+  {
+    "sha": "70f2d9c3fda52346cd9bd624b92470f6be7e3480",
+    "message": "Put back README.md",
+    "author": "kthota-g",
+    "date": "2025-04-11T05:50:54Z"
+  },
+  {
+    "sha": "8bb8b364b387234d51a331705e47ba24abdf357c",
+    "message": "chore: correct some typos (#82)",
+    "author": "Nilanjan De",
+    "date": "2025-04-10T23:56:26Z"
+  },
+  {
+    "sha": "840e132c8ff77f50bd9a624f9afc3b1135a54b91",
+    "message": "chore: update agent.py (#45)\n\nminor fix",
+    "author": "Ikko Eltociear Ashimine",
+    "date": "2025-04-10T23:46:10Z"
+  },
+  {
+    "sha": "8b33d47544a71596a44e1de53cf030a9cdc517e0",
+    "message": "feat: add placeholder text for agent address input in agent list page (#40)",
+    "author": "Anil Karaka",
+    "date": "2025-04-10T22:54:54Z"
+  },
+  {
+    "sha": "11c589cc38b3c5db9bb2698e405bfd3ba14718a7",
+    "message": "fix: get_agent_card return type (#44)",
+    "author": "Mathew Shen",
+    "date": "2025-04-10T22:54:23Z"
+  },
+  {
+    "sha": "c5b73a1d925bd49a7f55c64416ff99c4fa2d9461",
+    "message": "docs: Update README for CLI sample to correct directory navigation instructions (#33)",
+    "author": "Anil Karaka",
+    "date": "2025-04-10T22:48:38Z"
+  },
+  {
+    "sha": "c55e8c7a6bd549902afcc38941cf39a9cbcdcd7d",
+    "message": "Changes to load .env and checks for API key (#79)",
+    "author": "kthota-g",
+    "date": "2025-04-10T22:24:06Z"
+  },
+  {
+    "sha": "251cd37d5e6ccbc985bb8d0d78c03d665fa86699",
+    "message": "Merge pull request #75 from google/polling\n\nAdd configurable polling to the UI",
+    "author": "pstephengoogle",
+    "date": "2025-04-10T19:32:19Z"
+  },
+  {
+    "sha": "f6fd8453314b39442012a73b2f5e332a35bc5e69",
+    "message": "Add configurable polling to the UI\n\n- Provide present intervals of 1, 5 and 30 seconds as well as a disable\n- Show the user message immediately (no polling) regardless of setting\n- Provide a force refresh, essential for disabled polling and long\n  polling to get updated",
+    "author": "Phil Stephens",
+    "date": "2025-04-10T19:06:18Z"
+  },
+  {
+    "sha": "0f6ea90062cf836e203c944112f96a3014747a01",
+    "message": "[Docs]: Add demo video link (#43)\n\n* docs: add demo video link\n\n* docs: use video tag to render video in readme file\n\n* Update to use hyperlink\n\n* Update README.md\n\n---------\n\nCo-authored-by: kthota-g <kcthota@google.com>",
+    "author": "Heet Vekariya",
+    "date": "2025-04-10T17:12:11Z"
+  },
+  {
+    "sha": "72d9feb073a546a6bb9953b5155c5591fd14bc3e",
+    "message": "Merge pull request #70 from google/DJ-os-patch-2\n\nUpdate README.md",
+    "author": "DJ-os",
+    "date": "2025-04-10T16:36:29Z"
+  },
+  {
+    "sha": "b297149737661cdbe0b6a594034137d2e534d6e1",
+    "message": "Update README.md\n\nAdding links to discussions and issues",
+    "author": "DJ-os",
+    "date": "2025-04-10T16:31:39Z"
+  },
+  {
+    "sha": "72a70c2f98ffdb9bd543a57c8de894fab96d3b85",
+    "message": "Update langgraph agent to use structured outputs. Fixes #30 (#38)",
+    "author": "kthota-g",
+    "date": "2025-04-10T01:46:24Z"
+  },
+  {
+    "sha": "0ad9630e044d72c22428f129165fe4c0de385902",
+    "message": "fix: correct grammar and formatting in Contributing section (#28)",
+    "author": "Jaimin Godhani",
+    "date": "2025-04-09T21:26:03Z"
+  },
+  {
+    "sha": "3ca4f2d8e64ec91a164defa56b600140bc0e2a03",
+    "message": "docs: Enhanced Documentation for LangGraph and CrewAI (#27)\n\n* Enhance README for CrewAI Agent with A2A Protocol:\n\n- Added detailed explanation of functionality\n- Setup instructions, features, and limitations.\n- Included a sequence diagram for clarity on agent interactions\n- improved formatting for better readability.\n\n* Update README for LangGraph Currency Agent:\n\n- Expanded overview of the currency conversion agent and its functionality.\n- Added detailed setup instructions and technical implementation details.\n- Included key features and limitations of the agent.\n- Enhanced formatting and added a sequence diagram for better understanding of interactions.\n\n* Remove instructions for simulated streaming in CrewAI README\n\n* Remove references to streaming\n\n---------\n\nCo-authored-by: kthota-g <kcthota@google.com>",
+    "author": "Joevidev",
+    "date": "2025-04-09T21:00:19Z"
+  },
+  {
+    "sha": "72e44a617e4baec538b729e21e6a95b1854b1068",
+    "message": "Merge pull request #15 from google/main-llms.txt\n\nAdd llms.txt & README chunks",
+    "author": "DJ-os",
+    "date": "2025-04-09T18:54:05Z"
+  },
+  {
+    "sha": "69a24017d4963b738f426359b69e80c5f5ea9c7d",
+    "message": "Fix ADK name",
+    "author": "alan bount",
+    "date": "2025-04-09T08:13:41Z"
+  },
+  {
+    "sha": "6a029b694b1eb1dfca543f5d2a010a74145ec572",
+    "message": "add video and intro core concepts to README.md",
+    "author": "alan bount",
+    "date": "2025-04-09T05:53:20Z"
+  },
+  {
+    "sha": "ed2bb9cc3ead6975de0d3f8249da2867dbd317aa",
+    "message": "add llms.txt",
+    "author": "alan bount",
+    "date": "2025-04-09T05:52:46Z"
+  },
+  {
+    "sha": "47b436f3d469f1763a982518cfe3fcc17a6d1818",
+    "message": "Initial commit",
+    "author": "Rajesh Velicheti",
+    "date": "2025-03-25T22:15:56Z"
+  }
+]
