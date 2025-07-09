@@ -75,11 +75,14 @@ Run MCP client with `uv run .../agent/client.py`
 - [Public MCP Servers & Clients](https://www.pulsemcp.com/)
 - [Gemini Function Calling](https://ai.google.dev/gemini-api/docs/function-calling?example=meeting#python_4)
 - [Gemini Tool Use](https://ai.google.dev/gemini-api/docs/live-tools?hl=en)
+- [A2A Resources](https://a2aprotocol.ai/docs/guide/awesome-a2a)
+- [A2A Tutorial](https://a2aproject.github.io/A2A/latest/tutorials/python/1-introduction/)
 
 ### Specifications
 
 - [MCP Spec](https://modelcontextprotocol.io/specification/2025-06-18/)
 - [JSON-RPC Spec](https://www.jsonrpc.org/specification)
+- [A2A Spec](https://a2aproject.github.io/A2A/latest/specification/)
 
 ### Frameworks
 
